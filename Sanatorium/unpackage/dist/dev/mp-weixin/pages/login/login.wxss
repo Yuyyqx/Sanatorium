@@ -56,11 +56,11 @@
 	border-right: 1rpx solid#BBBBBB;
 	padding-right: 25rpx;
 }
-.yzm{
+.yzm {
 	color: #0B4A87;
 	font-size: small;
 	margin-top: 55rpx;
-	margin-left:130rpx;
+	margin-left: 130rpx;
 }
 .text_green {
 	color: rgb(58, 146, 85);

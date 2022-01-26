@@ -8856,13 +8856,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _qs = _interopRequireDefault(__webpack_require__(/*! qs */ 16));
 var _base = _interopRequireDefault(__webpack_require__(/*! ../base.js */ 14));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 根据需求是否导入qs模块
 var login = {
-  //租客/成员注册（公共）
-  registrationPublic: function registrationPublic(communityId, idNumber, mobilephone, name, publicPropertyId, type) {
-    return _request.default.httpRequest("".concat(_base.default.sq, "/registration?communityId=").concat(communityId, "&idNumber=").concat(idNumber, "&mobilephone=").concat(mobilephone, "&name=").concat(name, "&publicPropertyId=").concat(publicPropertyId, "&type=").concat(type), 'POST');
+  /* 	//租客/成员注册（公共）
+              	registrationPublic(communityId,idNumber,mobilephone,name,publicPropertyId,type){
+              		return request.httpRequest(`${base.sq}/registration?communityId=${communityId}&idNumber=${idNumber}&mobilephone=${mobilephone}&name=${name}&publicPropertyId=${publicPropertyId}&type=${type}`, 'POST')
+              	},
+              	//获取banner
+              	getBannerList(){
+              		return request.httpRequest(`${base.sq}/banner`,'GET')
+              	}, */
+
+  //手机号or身份证+密码登录
+  loginByPassword: function loginByPassword(params) {
+    return _request.default.httpRequest("".concat(_base.default.url, "/user/loginByPwd"), 'POST', params);
   },
-  //获取banner
-  getBannerList: function getBannerList() {
-    return _request.default.httpRequest("".concat(_base.default.sq, "/banner"), 'GET');
+  //注册用户
+  registUser: function registUser(params) {
+    return _request.default.httpRequest("".concat(_base.default.url, "/user/register"), 'POST', params);
   } };var _default =
 
 
@@ -8967,7 +8976,7 @@ var httpRequest = function httpRequest(url, methods, data, type, mycontent) {
             reject(res);
             _log.default.error('-----load in ' + url + '-----' + JSON.stringify(res));
             uni.showToast({
-              title: '上传失败', //后台返回的错误情况
+              title: '操作失败', //后台返回的错误情况
               icon: 'none' });
 
           }
@@ -9004,11 +9013,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
                                                                                                       */
 var base = {
   // 测试服务器
-  sq: 'https://toupiao.mxzhou.cn', //接口地址	
-  img: 'https://toupiao.mxzhou.cn/toupiao/files/', //文件接口地址	
-  upload: 'https://toupiao.mxzhou.cn/file/tmpUpload', //文件上传接口地址
-  iconUrl: 'https://toupiao.mxzhou.cn/toupiao/files/vote-system-demo/avatar/' //图标地址
-};var _default =
+  /* 	sq: 'https://toupiao.mxzhou.cn',    //接口地址	
+  	img:'https://toupiao.mxzhou.cn/toupiao/files/', //文件接口地址	
+  	upload:'https://toupiao.mxzhou.cn/file/tmpUpload', //文件上传接口地址
+  	iconUrl:'https://toupiao.mxzhou.cn/toupiao/files/vote-system-demo/avatar/',//图标地址 */
+  url: 'https://www.tangyihan.top/app' };var _default =
+
 base;exports.default = _default;
 
 /***/ }),

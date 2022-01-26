@@ -8,12 +8,12 @@
 			<view class="mid">
 				<view class="item">
 					<image src="../../../static/images/username.png"/>
-					<input placeholder="手机号" placeholder-style="color: #898989;" type="text" style="margin-top: 50rpx;"/>
+					<input placeholder="手机号" placeholder-style="color: #898989;" type="text" style="margin-top: 50rpx;" v-model="phone"/>
 					<text class="yzm">发送验证码</text>
 				</view>
 				<view class="item">
 					<image src="../../../static/images/password.png"/>
-					<input type="text" placeholder="密码" placeholder-style="color: #898989;" style="margin-top: 50rpx;"/>
+					<input type="text" placeholder="密码" placeholder-style="color: #898989;" style="margin-top: 50rpx;" v-model="pwd"/>
 				</view>
 				<view class="item">
 					<image src="../../../static/images/yzm.png"/>
@@ -31,25 +31,37 @@
 	export default {
 		data() {
 			return {
-				state:0
+				state:0,
+				phone:'',
+				pwd:''
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-			familyClick(){
-				this.state=0
-				console.log(this.state)
-			},
-			workerClick(){
-				this.state=1
-				console.log(this.state)
-			},
 			jumpTo(){
-				uni.navigateTo({
-				 		url: './binding',
-						})
+				this.$api.login.registUser({
+					phone:this.phone,
+					pwd:this.pwd
+					}
+				).then(res => {
+					console.log(res)
+					if (res.msg == '成功' ) {
+						console.log(res.data);
+						uni.setStorageSync('userId', res.data.userId)
+						uni.navigateTo({
+						 		url: './binding',
+								})
+					}
+				}).catch(err => {
+				console.log(err);
+				uni.showToast({
+					title: '用户已注册,请登录', //后台返回的错误情况
+					icon: 'none'
+				})
+				})
+				
 			}
 		}
 	}

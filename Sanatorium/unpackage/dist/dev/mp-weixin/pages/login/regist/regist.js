@@ -163,24 +163,36 @@ var _default =
 {
   data: function data() {
     return {
-      state: 0 };
+      state: 0,
+      phone: '',
+      pwd: '' };
 
   },
   onLoad: function onLoad() {
 
   },
   methods: {
-    familyClick: function familyClick() {
-      this.state = 0;
-      console.log(this.state);
-    },
-    workerClick: function workerClick() {
-      this.state = 1;
-      console.log(this.state);
-    },
     jumpTo: function jumpTo() {
-      uni.navigateTo({
-        url: './binding' });
+      this.$api.login.registUser({
+        phone: this.phone,
+        pwd: this.pwd }).
+
+      then(function (res) {
+        console.log(res);
+        if (res.msg == '成功') {
+          console.log(res.data);
+          uni.setStorageSync('userId', res.data.userId);
+          uni.navigateTo({
+            url: './binding' });
+
+        }
+      }).catch(function (err) {
+        console.log(err);
+        uni.showToast({
+          title: '用户已注册,请登录', //后台返回的错误情况
+          icon: 'none' });
+
+      });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

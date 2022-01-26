@@ -87,7 +87,7 @@ const httpRequest = (url, methods, data, type, mycontent) => {
 						reject(res)
 						log.error('-----load in ' + url + '-----' + JSON.stringify(res))
 						uni.showToast({
-							title: '上传失败', //后台返回的错误情况
+							title: '操作失败', //后台返回的错误情况
 							icon: 'none'
 						})
 					}

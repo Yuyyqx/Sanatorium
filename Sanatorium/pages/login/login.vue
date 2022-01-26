@@ -12,12 +12,12 @@
 				<view class="item">
 					<image src="../../static/images/username.png" />
 					<input placeholder="输入身份证/手机号" placeholder-style="color: #898989;" type="text"
-						style="margin-top: 50rpx;" />
+						style="margin-top: 50rpx;" v-model="num"/>
 				</view>
 				<view class="item">
 					<image src="../../static/images/password.png" />
 					<input type="text" placeholder="输入密码" placeholder-style="color: #898989;"
-						style="margin-top: 50rpx;" />
+						style="margin-top: 50rpx;" v-model="pwd"/>
 				</view>
 			</view>
 			<!-- 验证码登录 -->
@@ -30,7 +30,7 @@
 				<view class="item" style="padding-bottom: 8rpx;">
 					<input type="text" placeholder="验证码" placeholder-style="color: #898989;"
 						style="margin-top: 50rpx;" />
-						<text class="yzm">发送验证码</text>
+					<text class="yzm">发送验证码</text>
 				</view>
 			</view>
 			<view class="bottom">
@@ -50,7 +50,9 @@
 		data() {
 			return {
 				state: 0,
-				way: 0
+				way: 0,
+				num:'17857310473',
+				pwd:'123456'
 			}
 		},
 		onLoad() {
@@ -58,42 +60,83 @@
 		},
 		methods: {
 			familyClick() {
-				this.state = 0
-				console.log(this.state)
+				/* this.state = 0
+				console.log(this.state) */
 			},
 			workerClick() {
-				this.state = 1
-				console.log(this.state)
+				/* this.state = 1
+				console.log(this.state) */
 			},
 			jumpTo() {
 				uni.navigateTo({
 					url: '/pages/login/regist/regist',
 				})
 			},
-			loginClick(){
-				
-				if(this.state==0){
-					uni.setStorageSync('change',0)
+			loginClick() {
+				if(this.way==0){ //密码登录
+				console.log('way+',this.way)
+					this.$api.login.loginByPassword({
+						phoneOrCardId:this.num,
+						pwd:this.pwd
+						}
+					).then(res => {
+						if (res.msg == '成功' ) {
+							console.log(res.data);
+							if(res.data.userRole==1){
+								uni.setStorageSync('change', 0)
+								uni.reLaunch({
+									url: '../index/index?change=0'
+								});
+								
+								uni.switchTab({
+									url: '../index/index',
+								})
+							}
+							else
+							if (res.data.userRole==0) {
+								uni.setStorageSync('change', 1)
+								uni.reLaunch({
+									url: '../index/index?change=1'
+								});
+								uni.switchTab({
+									url: '../index/index',
+								})
+							
+							}
+						} else {
+							this.$refs.uToast.show({
+								title: '不存在该用户',
+								type: 'error',
+								
+							})
+						}
+					}).catch(err => {
+					
+					})
+				}
+
+/* 				if (this.state == 0) {
+					uni.setStorageSync('change', 0)
 					uni.reLaunch({
-					    url:'../index/index?change=0'
+						url: '../index/index?change=0'
 					});
 
 					uni.switchTab({
-					url: '../index/index',
-				})
-				
-				}else
-				if(this.state==1){
-					uni.setStorageSync('change',1)
+						url: '../index/index',
+					})
+
+				} else
+				if (this.state == 1) {
+					uni.setStorageSync('change', 1)
 					uni.reLaunch({
-					    url:'../index/index?change=1'
+						url: '../index/index?change=1'
 					});
 					uni.switchTab({
-					url: '../index/index',
-				})
-				
+						url: '../index/index',
+					})
+
 				}
-				
+ */
 			}
 		}
 	}
@@ -151,11 +194,12 @@
 		border-right: 1rpx solid#BBBBBB;
 		padding-right: 25rpx;
 	}
-	.yzm{
+
+	.yzm {
 		color: #0B4A87;
 		font-size: small;
 		margin-top: 55rpx;
-		margin-left:130rpx;
+		margin-left: 130rpx;
 	}
 
 	.text_green {

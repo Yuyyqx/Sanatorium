@@ -191,7 +191,9 @@ var _default =
   data: function data() {
     return {
       state: 0,
-      way: 0 };
+      way: 0,
+      num: '17857310473',
+      pwd: '123456' };
 
   },
   onLoad: function onLoad() {
@@ -199,42 +201,83 @@ var _default =
   },
   methods: {
     familyClick: function familyClick() {
-      this.state = 0;
-      console.log(this.state);
+      /* this.state = 0
+                                         console.log(this.state) */
     },
     workerClick: function workerClick() {
-      this.state = 1;
-      console.log(this.state);
+      /* this.state = 1
+                                         console.log(this.state) */
     },
     jumpTo: function jumpTo() {
       uni.navigateTo({
         url: '/pages/login/regist/regist' });
 
     },
-    loginClick: function loginClick() {
+    loginClick: function loginClick() {var _this = this;
+      if (this.way == 0) {//密码登录
+        console.log('way+', this.way);
+        this.$api.login.loginByPassword({
+          phoneOrCardId: this.num,
+          pwd: this.pwd }).
 
-      if (this.state == 0) {
-        uni.setStorageSync('change', 0);
-        uni.reLaunch({
-          url: '../index/index?change=0' });
-
-
-        uni.switchTab({
-          url: '../index/index' });
-
-
-      } else
-      if (this.state == 1) {
-        uni.setStorageSync('change', 1);
-        uni.reLaunch({
-          url: '../index/index?change=1' });
-
-        uni.switchTab({
-          url: '../index/index' });
+        then(function (res) {
+          if (res.msg == '成功') {
+            console.log(res.data);
+            if (res.data.userRole == 1) {
+              uni.setStorageSync('change', 0);
+              uni.reLaunch({
+                url: '../index/index?change=0' });
 
 
+              uni.switchTab({
+                url: '../index/index' });
+
+            } else
+
+            if (res.data.userRole == 0) {
+              uni.setStorageSync('change', 1);
+              uni.reLaunch({
+                url: '../index/index?change=1' });
+
+              uni.switchTab({
+                url: '../index/index' });
+
+
+            }
+          } else {
+            _this.$refs.uToast.show({
+              title: '不存在该用户',
+              type: 'error' });
+
+
+          }
+        }).catch(function (err) {
+
+        });
       }
 
+      /* 				if (this.state == 0) {
+        					uni.setStorageSync('change', 0)
+        					uni.reLaunch({
+        						url: '../index/index?change=0'
+        					});
+        
+        					uni.switchTab({
+        						url: '../index/index',
+        					})
+        
+        				} else
+        				if (this.state == 1) {
+        					uni.setStorageSync('change', 1)
+        					uni.reLaunch({
+        						url: '../index/index?change=1'
+        					});
+        					uni.switchTab({
+        						url: '../index/index',
+        					})
+        
+        				}
+         */
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
