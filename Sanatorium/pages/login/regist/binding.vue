@@ -57,11 +57,12 @@
 						id: 0,
 						name: '老人尚未入住'
 					},
-				]
+				],
+				userId:'2161798663'
 			}
 		},
 		onLoad() {
-
+		
 		},
 		methods: {
 			titlePicker(e) {
@@ -69,9 +70,31 @@
 				console.log(this.title_list[e.target.value].id) //获取id
 			},
 			oldClick(){
-				uni.navigateTo({
-				 		url: './bindingOld',
+				//userId:2161798663
+				//judgeOldNumber
+				this.userId= uni.getSystemInfoSync('userId');
+				this.$api.login.judgeOldNumber({
+					userId:this.userId,
+					}
+				).then(res => {
+					console.log(res)
+					if (res.msg == '成功' ) {
+						uni.navigateTo({
+						 		url: './bindingOld',
+								})
+					}else{
+						uni.showToast({
+							title: '跳转失败', //后台返回的错误情况
+							icon: 'none'
 						})
+					}
+				}).catch(err => {
+				console.log(err);
+				uni.showToast({
+					title: '跳转失败', //后台返回的错误情况
+					icon: 'none'
+				})
+				})
 			}
 		}
 	}

@@ -187,9 +187,10 @@ var _default =
       title: '点此选择老人进行绑定',
       title_list: [{
         id: 0,
-        name: '老人尚未入住' }] };
+        name: '老人尚未入住' }],
 
 
+      userId: '2161798663' };
 
   },
   onLoad: function onLoad() {
@@ -201,9 +202,31 @@ var _default =
       console.log(this.title_list[e.target.value].id); //获取id
     },
     oldClick: function oldClick() {
-      uni.navigateTo({
-        url: './bindingOld' });
+      //userId:2161798663
+      //judgeOldNumber
+      this.userId = uni.getSystemInfoSync('userId');
+      this.$api.login.judgeOldNumber({
+        userId: this.userId }).
 
+      then(function (res) {
+        console.log(res);
+        if (res.msg == '成功') {
+          uni.navigateTo({
+            url: './bindingOld' });
+
+        } else {
+          uni.showToast({
+            title: '跳转失败', //后台返回的错误情况
+            icon: 'none' });
+
+        }
+      }).catch(function (err) {
+        console.log(err);
+        uni.showToast({
+          title: '跳转失败', //后台返回的错误情况
+          icon: 'none' });
+
+      });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

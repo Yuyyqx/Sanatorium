@@ -8872,6 +8872,14 @@ var login = {
   //注册用户
   registUser: function registUser(params) {
     return _request.default.httpRequest("".concat(_base.default.url, "/user/register"), 'POST', params);
+  },
+  //判断已绑定老人数量
+  judgeOldNumber: function judgeOldNumber(params) {
+    return _request.default.httpRequest("".concat(_base.default.url, "/user/clickBindOld"), 'POST', params);
+  },
+  //绑定老人
+  bindingOld: function bindingOld(params) {
+    return _request.default.httpRequest("".concat(_base.default.url, "/user/bindOld"), 'POST', params);
   } };var _default =
 
 

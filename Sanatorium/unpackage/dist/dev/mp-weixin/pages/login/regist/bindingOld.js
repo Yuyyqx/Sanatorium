@@ -130,7 +130,27 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -195,23 +215,38 @@ var _default =
       name: '',
       idCard: '',
       phone: '',
+      cardType: '请选择',
+      keyWord: '',
       honor: false,
       title: '请选择',
+      whether: '请选择',
       title_list: [{
         id: 0,
-        name: '子女' },
+        name: '大体健康' },
 
       {
         id: 1,
-        name: '配偶' },
+        name: '恢复健康' },
 
       {
         id: 3,
-        name: '兄弟姐妹' },
+        name: '基本自理' },
 
       {
         id: 3,
-        name: '其余亲属' }] };
+        name: '丧失自理' }],
+
+      whether_list: [{
+        id: 0,
+        name: '不是' },
+
+      {
+        id: 1,
+        name: '是' }],
+
+      type_list: [{
+        id: 0,
+        name: '居民身份证' }] };
 
 
   },
@@ -222,7 +257,42 @@ var _default =
     titlePicker: function titlePicker(e) {
       this.title = this.title_list[e.target.value].name;
       console.log(this.title_list[e.target.value].id); //获取id
+    },
+    titlePicker1: function titlePicker1(e) {
+      this.whether = this.whether_list[e.target.value].name;
+      this.isFirstContact = this.whether_list[e.target.value].id;
+      console.log(this.whether_list[e.target.value].id); //获取id
+    },
+    titlePicker2: function titlePicker2(e) {
+      this.cardType = this.type_list[e.target.value].name;
+      console.log(this.whether_list[e.target.value].id); //获取id
+    },
+    bindClick: function bindClick() {
+      console.log(this.title, this.cardType,
+      this.keyWord, this.isFirstContact, this.idCard, this.name, uni.getStorageSync('userId'));
+      this.$api.login.bindingOld({
+        baseHealth: this.title,
+        cardType: this.cardType,
+        hopeSan: this.keyWord,
+        isFirstContact: this.isFirstContact,
+        oldCardId: this.idCard,
+        oldName: this.name,
+        userId: uni.getStorageSync('userId') }).
+
+      then(function (res) {
+        console.log(res);
+        if (res.msg == '成功') {
+          console.log(res);
+        }
+      }).catch(function (err) {
+        console.log(err);
+        uni.showToast({
+          title: err.msg, //后台返回的错误情况
+          icon: 'none' });
+
+      });
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

@@ -18,6 +18,14 @@ const login = {
 	//注册用户
 	registUser(params){
 		return request.httpRequest(`${base.url}/user/register`,'POST',params)
+	},
+	//判断已绑定老人数量
+	judgeOldNumber(params){
+		return request.httpRequest(`${base.url}/user/clickBindOld`,'POST',params)
+	},
+	//绑定老人
+	bindingOld(params){
+		return request.httpRequest(`${base.url}/user/bindOld`,'POST',params)
 	}
 }
 

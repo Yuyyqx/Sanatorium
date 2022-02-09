@@ -40,7 +40,7 @@ page{
 }
 .form {
 	width: 750rpx;
-	height: 735rpx;
+	height: 800rpx;
 	background-color: #FFFFFF;
 	padding: 0rpx 30rpx 0rpx 30rpx;
 }
@@ -64,12 +64,14 @@ page{
 	color: #898989;
 	border: 1rpx solid#BBBBBB;
 	padding: 10rpx;
-	width: 150rpx;
+	width: 190rpx;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	margin-left: 400rpx;
+	position: absolute;
+	right: 35rpx;
 	border-radius: 8rpx;
+	margin-top: -30rpx;
 }
 .icon1 {
 	width: 20rpx;
@@ -80,8 +82,9 @@ page{
 	width: 20rpx;
 	height: 20rpx;
 	position: absolute;
-	right: 48rpx;
-	top: 560rpx;
+	right: 15rpx;
+	margin-top: 10rpx;
+	/* top: 560rpx; */
 }
 .pass {
 	color: #0B4A87;

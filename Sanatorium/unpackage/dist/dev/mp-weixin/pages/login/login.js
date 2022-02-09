@@ -192,7 +192,7 @@ var _default =
     return {
       state: 0,
       way: 0,
-      num: '17857310473',
+      num: '123456',
       pwd: '123456' };
 
   },
