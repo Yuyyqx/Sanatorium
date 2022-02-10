@@ -2,6 +2,8 @@ page {
   background-color: #f7f8f9;
 }
 .content {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   background-color: #ffffff;
   padding: 40rpx;
@@ -17,9 +19,15 @@ page {
   width: 700rpx;
   height: 75rpx;
   color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   background-color: #27aca3;
   position: absolute;
   bottom: 100rpx;
@@ -31,10 +39,15 @@ page {
 }
 .images {
   width: 700rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-top: 20rpx;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   color: #AAAAAA;
 }
 .images image {
@@ -51,6 +64,8 @@ page {
   height: 1100rpx;
 }
 .sign {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   margin: 15rpx 0rpx 10rpx 10rpx;
 }
@@ -59,9 +74,13 @@ page {
   background-color: #f0f0f0;
 }
 .item {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   width: 750rpx;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   margin-left: 10rpx;
   margin-top: 30rpx;
   font-size: 34rpx;
@@ -75,9 +94,15 @@ page {
 .sign-normal {
   background-color: #fcd79e;
   padding: 5rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   margin-left: 30rpx;
   font-size: small;
   border-radius: 5rpx;
@@ -88,9 +113,15 @@ page {
 .sign-special {
   background-color: #fab6b6;
   padding: 5rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   margin-left: 30rpx;
   font-size: small;
   border-radius: 5rpx;

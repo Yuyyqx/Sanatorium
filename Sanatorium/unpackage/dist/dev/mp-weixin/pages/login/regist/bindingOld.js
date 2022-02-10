@@ -282,7 +282,10 @@ var _default =
       then(function (res) {
         console.log(res);
         if (res.msg == '成功') {
-          console.log(res);
+          console.log(res.data);
+          uni.navigateTo({
+            url: '../../index/index' });
+
         }
       }).catch(function (err) {
         console.log(err);

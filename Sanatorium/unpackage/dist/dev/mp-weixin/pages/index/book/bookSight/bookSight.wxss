@@ -1,6 +1,11 @@
 .content {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   padding: 20rpx;
 }
 .title {
@@ -12,18 +17,30 @@
 .item {
   width: 100%;
   height: 110rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   margin-top: 20rpx;
   font-size: small;
 }
 .item1 {
   width: 100%;
   height: 110rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   margin-top: 20rpx;
   font-size: small;
   border-bottom: 1rpx solid #e7e7e7;
@@ -35,8 +52,12 @@
 }
 .card {
   margin-top: -10rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .card .choose {
   color: #66a3b4;
@@ -48,6 +69,8 @@
   margin-top: 30rpx;
 }
 .img {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   margin-right: 10rpx;
 }
@@ -75,9 +98,15 @@
   height: 75rpx;
   margin: 40rpx 0rpx 10rpx 50rpx;
   color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   background-color: #27aca3;
 }
 

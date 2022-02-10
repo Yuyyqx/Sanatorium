@@ -1,12 +1,21 @@
 .content {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   padding: 20rpx;
   font-size: medium;
 }
 .top-title {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .box {
   width: 20rpx;
@@ -23,18 +32,30 @@
 .item {
   width: 100%;
   height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   margin-top: 20rpx;
   font-size: small;
 }
 .item1 {
   width: 100%;
   height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   margin-top: 20rpx;
   font-size: small;
   border-bottom: 1rpx solid #e7e7e7;
@@ -47,8 +68,12 @@
 }
 .card {
   margin-top: -10rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .card .choose {
   color: #66a3b4;
@@ -61,6 +86,8 @@
   margin-top: 30rpx;
 }
 .img {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   margin-right: 10rpx;
 }
@@ -88,9 +115,15 @@
   height: 75rpx;
   margin: 40rpx 0rpx 10rpx 50rpx;
   color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   background-color: #27aca3;
 }
 .u-order-title text {
@@ -110,6 +143,8 @@
   margin-top: 25rpx;
 }
 .comment {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   padding: 30rpx;
 }
@@ -120,14 +155,22 @@
   background-color: #f2f2f2;
 }
 .comment .right {
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
   padding-left: 20rpx;
   font-size: 26rpx;
 }
 .comment .right .top {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   margin-bottom: 10rpx;
 }
 .comment .right .top .name {
@@ -149,8 +192,12 @@
   margin-left: 20rpx;
 }
 .btn-group {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
 }
 .btn-group .btn {
   width: 48%;
@@ -169,25 +216,43 @@
   margin-left: -40rpx;
 }
 .pic {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
 }
 .u-track-image {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
 }
 .u-node {
   border-radius: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   background: #d0d0d0;
   width: 20rpx;
   height: 20rpx;
 }
 .time-left {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   margin-left: -80rpx;
   margin-top: -60rpx;
 }

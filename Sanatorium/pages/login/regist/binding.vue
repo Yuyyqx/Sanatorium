@@ -52,13 +52,13 @@
 				idCard: '',
 				phone: '',
 				honor: false,
-				title: '点此选择老人进行绑定',
-				title_list: [{
-						id: 0,
-						name: '老人尚未入住'
-					},
-				],
-				userId:'2161798663'
+				// title: '点此选择老人进行绑定',
+				// title_list: [{
+				// 		id: 0,
+				// 		name: '老人尚未入住'
+				// 	},
+				// ],
+				
 			}
 		},
 		onLoad() {
@@ -72,9 +72,11 @@
 			oldClick(){
 				//userId:2161798663
 				//judgeOldNumber
-				this.userId= uni.getSystemInfoSync('userId');
+				
+				let userId= uni.getStorageSync('userId');
+				console.log(userId)
 				this.$api.login.judgeOldNumber({
-					userId:this.userId,
+					userId:userId,
 					}
 				).then(res => {
 					console.log(res)

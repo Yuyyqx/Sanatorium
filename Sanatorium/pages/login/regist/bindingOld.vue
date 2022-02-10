@@ -150,7 +150,10 @@
 				).then(res => {
 					console.log(res)
 					if (res.msg == '成功' ) {
-						console.log(res)
+						console.log(res.data)
+						uni.navigateTo({
+						 		url: '../../index/index',
+								})
 					}
 				}).catch(err => {
 				console.log(err);

@@ -25,9 +25,15 @@
 /* 透明度 */
 /* 文章场景相关 */
 .flex-between {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .line {
   margin: 40rpx 0;
@@ -42,9 +48,16 @@
   font-size: 32rpx;
 }
 .top1 {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   margin-top: 10rpx;
 }
 .top1 .rankticket {
@@ -57,9 +70,16 @@
   border-radius: 50%;
 }
 .top2 {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   margin-top: -170rpx;
   margin-left: -450rpx;
 }
@@ -73,9 +93,16 @@
   border-radius: 50%;
 }
 .top3 {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   margin-top: -250rpx;
   margin-left: 450rpx;
 }
@@ -98,6 +125,8 @@
   height: 40rpx;
 }
 .otherrank {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   width: 100%;
   height: 100rpx;

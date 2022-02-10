@@ -183,14 +183,14 @@ var _default =
       name: '',
       idCard: '',
       phone: '',
-      honor: false,
-      title: '点此选择老人进行绑定',
-      title_list: [{
-        id: 0,
-        name: '老人尚未入住' }],
-
-
-      userId: '2161798663' };
+      honor: false
+      // title: '点此选择老人进行绑定',
+      // title_list: [{
+      // 		id: 0,
+      // 		name: '老人尚未入住'
+      // 	},
+      // ],
+    };
 
   },
   onLoad: function onLoad() {
@@ -204,9 +204,11 @@ var _default =
     oldClick: function oldClick() {
       //userId:2161798663
       //judgeOldNumber
-      this.userId = uni.getSystemInfoSync('userId');
+
+      var userId = uni.getStorageSync('userId');
+      console.log(userId);
       this.$api.login.judgeOldNumber({
-        userId: this.userId }).
+        userId: userId }).
 
       then(function (res) {
         console.log(res);

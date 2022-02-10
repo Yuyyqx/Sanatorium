@@ -25,9 +25,15 @@
 /* 透明度 */
 /* 文章场景相关 */
 .flex-between {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .line {
   margin: 40rpx 0;
@@ -36,8 +42,12 @@
 .back-button {
   width: 30px;
   height: 30px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   opacity: 0.8;
   margin-top: 25px;
   margin-left: 15px;
@@ -54,8 +64,12 @@
   right: 15px;
   width: 30px;
   height: 30px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   opacity: 0.8;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -72,8 +86,12 @@
   right: 30px;
   width: 30px;
   height: 30px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   opacity: 0.8;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.8);
