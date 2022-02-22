@@ -151,7 +151,8 @@
 					console.log(res)
 					if (res.msg == '成功' ) {
 						console.log(res.data)
-						uni.navigateTo({
+						uni.switchTab({
+						})({
 						 		url: '../../index/index',
 								})
 					}
