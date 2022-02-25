@@ -254,7 +254,7 @@
 			return {
 				swipers: [{
 						id: 0,
-						imgUrl: '../../static/images/liao3.webp'
+						imgUrl: '../../static/images/liao3.png'
 					},
 					{
 						id: 1,
@@ -352,6 +352,7 @@
 		flex-direction: column;
 		align-items: center;
 		color: #ffffff;
+		z-index: -2;
 	}
 
 	.top-up {
@@ -368,6 +369,7 @@
 	.top-image {
 		width: 720rpx;
 		height: 250rpx;
+		z-index: -1;
 	}
 
 	.search {
@@ -437,7 +439,7 @@
 	}
 
 	.tabs {
-
+		
 		width: 700rpx;
 		height: 400rpx;
 		background-color: #ffffff;
@@ -445,6 +447,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		
 		
 	}
 
@@ -456,14 +459,14 @@
 		justify-content: space-around;
 		font-size: 25rpx;
 		align-items: center;
-		z-index: 0;
+		
 
 	}
 
 	.tabs-item image {
 		width: 50rpx;
 		height: 50rpx;
-
+		
 	}
 
 	.line-row {
@@ -471,7 +474,7 @@
 		height: 1rpx;
 		background-color: #F0F0F0;
 		margin-top: -245rpx;
-		z-index: -1;
+		
 	}
 
 	.box {

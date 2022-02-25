@@ -2,25 +2,14 @@ page {
   background-color: #f7f8f9;
 }
 .content {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .title {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   font-size: large;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   color: #000000;
   background-color: #ffffff;
   width: 750rpx;
@@ -32,13 +21,9 @@ page {
   margin: 30rpx 20rpx 20rpx 20rpx;
 }
 .title1 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   font-size: large;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   margin-top: 30rpx;
   color: #1d988e;
   background-color: #ffffff;
@@ -51,13 +36,9 @@ page {
   margin: 30rpx 20rpx 20rpx 20rpx;
 }
 .title2 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   font-size: large;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   width: 750rpx;
   margin-top: 30rpx;
   background-color: #ffffff;
@@ -70,16 +51,11 @@ page {
   margin: 30rpx 20rpx 20rpx 20rpx;
 }
 .body {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   background-color: #ffffff;
 }
 .left {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 400rpx;
   margin-top: 40rpx;
   padding-left: 40rpx;
@@ -90,15 +66,11 @@ page {
   margin-right: 25rpx;
 }
 .item {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   width: 320rpx;
   height: 100rpx;
 }
 .item .item-right {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .item .content {
@@ -114,27 +86,16 @@ page {
   background-color: #FFFFFF;
 }
 .score {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 750rpx;
   padding: 0rpx 25rpx 0rpx 25rpx;
   background-color: #ffffff;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 .score .up {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 30rpx;
 }
 .score .num {
@@ -145,13 +106,10 @@ page {
 }
 .btns {
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   width: 740rpx;
   padding: 30rpx 0rpx 40rpx 0rpx;
-  -webkit-justify-content: space-around;
-          justify-content: space-around;
+  justify-content: space-around;
 }
 .btns .btn {
   width: 320rpx;
@@ -160,27 +118,16 @@ page {
   background-color: #fffae8;
   color: #27aca3;
   border: 1rpx solid #27aca3;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .scroll {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   /* .item {
 		display: flex;
 		flex-direction: column;

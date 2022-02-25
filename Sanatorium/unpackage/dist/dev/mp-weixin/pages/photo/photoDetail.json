@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "监控",
-  "usingComponents": {
-    "yy-video-player": "/components/yy-video-player/yy-video-player"
-  }
+  "usingComponents": {}
 }

@@ -37,7 +37,7 @@
 				<text>报警时间</text>
 				<view class="card">
 					<text>2021/12/3 19：04</text>
-					<image src="../../../static/images/house3.png" />
+					<image src="../../../../static/images/house3.png" />
 				</view>
 			</view>
 			<view class="item">

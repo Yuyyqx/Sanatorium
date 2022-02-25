@@ -56,10 +56,10 @@
 					}
 				}).catch(err => {
 				console.log(err);
-				uni.showToast({
-					title: '用户已注册,请登录', //后台返回的错误情况
-					icon: 'none'
-				})
+				// uni.showToast({
+				// 	title: '用户已注册,请登录', //后台返回的错误情况
+				// 	icon: 'none'
+				// })
 				})
 				
 			}

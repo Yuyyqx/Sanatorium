@@ -1,28 +1,14 @@
 .content {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: column;
-  -webkit-justify-content: column;
-          justify-content: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: column;
 }
 .form {
   width: 700rpx;
   padding-top: 20rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .form .large-title {
   font-size: 36rpx;
@@ -35,30 +21,19 @@
   margin-top: 50rpx;
 }
 .form .top {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   margin-top: 20rpx;
   color: #BBBBBB;
 }
 .form .box {
   width: 750rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   padding-top: 20rpx;
 }
 .form .box .item {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-right: 20rpx;
   font-size: small;
   background-color: #f4f4f4;
@@ -80,13 +55,8 @@
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 .form .line {
   width: 700rpx;
@@ -109,15 +79,9 @@
   height: 75rpx;
   margin: 40rpx 0rpx 50rpx 0rpx;
   color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #27aca3;
 }
 

@@ -1,1 +1,1 @@
-<view class="content"><view class="page"><yy-video-player vue-id="5a774e09-1" auto-play="{{false}}" url="{{url}}" poster="{{poster}}" danmu-list="{{danmuList}}" show-back-btn="{{true}}" bind:__l="__l"></yy-video-player></view></view>
+<view class="content"><view class="page-body"><view class="page-section"><video id="myVideo" src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/360e4b20-4f4b-11eb-8a36-ebb87efcf8c0.mp4" data-event-opts="{{[['error',[['videoErrorCallback',['$event']]]]]}}" binderror="__e"></video></view></view></view>

@@ -19,22 +19,33 @@
 			</view>
 			<view class="item1">
 				<text>联系电话</text>
-				<input type="text" placeholder="请输入证件号码" placeholder-style="color:#BBBBBB;" />
+				<input type="text" placeholder="请输入联系电话" placeholder-style="color:#BBBBBB;" />
+			</view>
+			<view class="item1">
+				<text>访问日期</text>
+				<picker mode="date" :value="date"  @change="bindDateChange">
+					<view class="top">
+						<text>{{date}}</text>
+						<image class="icon" src="../../../../static/images/house3.png" />
+					</view>  
+				</picker>
 			</view>
 			<view class="item1">
 				<text>访问时间</text>
-				<view class="card">
-					<text>2021/11/4 13：28</text>
-					<image src="../../../static/images/house3.png" />
-				</view>
+				<picker mode="time" :value="time"  @change="bindTimeChange">
+					<view class="top">
+						<text>{{time}}</text>
+						<image class="icon" src="../../../../static/images/house3.png" />
+					</view>  
+				</picker>
 			</view>
 			<view class="item" style="height: auto;width: auto;">
 				<text>核酸检测报告上传</text>
 				<view style="display: flex;">
-					<image class="upload" src="../../../static/images/upload.png" @click="addInfo" />
+					<image class="upload" src="../../../../static/images/upload.png" @click="addInfo" />
 					<view class="img" v-for="(item,index) in imgList" :key="index" @tap="ViewImage">
 						<image :src="imgList[index]" mode="aspectFill"></image>
-						<image @click="delete1(index)" class="delete" src="../../../static/images/delete.png" mode=""></image>
+						<image @click="delete1(index)" class="delete" src="../../../../static/images/delete.png" mode=""></image>
 					</view>
 				</view>
 
@@ -59,15 +70,21 @@
 				imgList: [],
 				imgList1: [],
 				status:0,
+				date: '2021-11-26',
+				time: '23：55'
 				
 			}
 		},
 		onLoad() {
-
+			this.getTime()
 		},
 		methods: {
 			submit() {
-				this.$refs.uUpload.upload();
+				// this.$refs.uUpload.upload();
+				uni.showToast({
+					title: '提交成功', //后台返回的错误情况
+					icon:'none'
+				})
 			},
 			addInfo() {
 				let that = this
@@ -130,6 +147,34 @@
 				this.setData({
 					imgList: imgList
 				})
+			},
+			getTime(){
+			var date = new Date(),
+			year = date.getFullYear(),
+			month = date.getMonth() + 1,
+			day = date.getDate(),
+			hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours(),
+			minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes(),
+			second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+			month >= 1 && month <= 9 ? (month = "0" + month) : "";
+			day >= 0 && day <= 9 ? (day = "0" + day) : "";
+			this.date = year + '-' + month + '-' + day
+			this.time = hour + ':' + minute + ':' + second;
+			
+			},
+			bindDateChange(e) {
+			
+				let that = this
+			
+				that.date = e.detail.value
+			
+			},
+			bindTimeChange(e) {
+			
+				let that = this
+			
+				that.time = e.detail.value
+			
 			},
 
 		}
@@ -235,5 +280,10 @@
 		align-items: center;
 		justify-content: center;
 		background-color: rgb(39,172,163);
+	}
+	
+	.icon{
+		position:absolute;
+		right: 50rpx;
 	}
 </style>

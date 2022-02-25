@@ -1,252 +1,258 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/login/login",
-          "pathName": "pages/login/login",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/login/regist/regist",
-          "pathName": "pages/login/regist/regist",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/login/regist/binding",
-          "pathName": "pages/login/regist/binding",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/login/regist/bindingOld",
-          "pathName": "pages/login/regist/bindingOld",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/mine",
-          "pathName": "pages/mine/mine",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/edit/information",
-          "pathName": "pages/mine/edit/information",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/edit/information",
-          "pathName": "pages/mine/edit/information",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/real/real",
-          "pathName": "pages/mine/real/real",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/photo/photo",
-          "pathName": "pages/photo/photo",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/message/message",
-          "pathName": "pages/message/message",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/login/regist/bindingOld",
-          "pathName": "pages/login/regist/bindingOld",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/house/house",
-          "pathName": "pages/index/house/house",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/house/houseDetail",
-          "pathName": "pages/index/house/houseDetail",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/book/bookType",
-          "pathName": "pages/index/book/bookType",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/book/bookSight",
-          "pathName": "pages/index/book/bookSight",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/hulian/hulian",
-          "pathName": "pages/index/hulian/hulian",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/hugong/hugong",
-          "pathName": "pages/index/hugong/hugong",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/jiaren/jiaren",
-          "pathName": "pages/index/jiaren/jiaren",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/jiaren/food/food",
-          "pathName": "pages/index/jiaren/food/food",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/rank/rank",
-          "pathName": "pages/index/rank/rank",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/book/bookHouse/bookHouse",
-          "pathName": "pages/index/book/bookHouse/bookHouse",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/house/houseDetail",
-          "pathName": "pages/index/house/houseDetail",
-          "query": "item=undefined",
-          "scene": null
-        },
-        {
-          "name": "pages/message/message",
-          "pathName": "pages/message/message",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/cost/cost",
-          "pathName": "pages/index/cost/cost",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/house/house",
-          "pathName": "pages/index/house/house",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/commit/commit",
-          "pathName": "pages/mine/commit/commit",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/commit/doCommit",
-          "pathName": "pages/mine/commit/doCommit",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/photo/photoDetail",
-          "pathName": "pages/photo/photoDetail",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/photo/project/doProject",
-          "pathName": "pages/photo/project/doProject",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/message/messageDetail",
-          "pathName": "pages/message/messageDetail",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/police",
-          "pathName": "pages/index/police/police",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/policeType/policeType",
-          "pathName": "pages/index/police/policeType/policeType",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/police/police",
-          "pathName": "pages/index/police/police/police",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/dealPolice/dealPolice",
-          "pathName": "pages/index/police/dealPolice/dealPolice",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/dealPolice/d",
-          "pathName": "pages/index/police/dealPolice/",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/dealPolice/dealPolice",
-          "pathName": "pages/index/police/dealPolice/dealPolice",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/police/dealPolice/dealDetail/dealDetail",
-          "pathName": "pages/index/police/dealPolice/dealDetail/dealDetail",
-          "query": "",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/login/login",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/regist/regist",
+                    "pathName": "pages/login/regist/regist",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/regist/binding",
+                    "pathName": "pages/login/regist/binding",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/regist/bindingOld",
+                    "pathName": "pages/login/regist/bindingOld",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/mine",
+                    "pathName": "pages/mine/mine",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/edit/information",
+                    "pathName": "pages/mine/edit/information",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/edit/information",
+                    "pathName": "pages/mine/edit/information",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/real/real",
+                    "pathName": "pages/mine/real/real",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/photo/photo",
+                    "pathName": "pages/photo/photo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/message/message",
+                    "pathName": "pages/message/message",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/regist/bindingOld",
+                    "pathName": "pages/login/regist/bindingOld",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/house/house",
+                    "pathName": "pages/index/house/house",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/house/houseDetail",
+                    "pathName": "pages/index/house/houseDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/book/bookType",
+                    "pathName": "pages/index/book/bookType",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/book/bookSight",
+                    "pathName": "pages/index/book/bookSight",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/hulian/hulian",
+                    "pathName": "pages/index/hulian/hulian",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/hugong/hugong",
+                    "pathName": "pages/index/hugong/hugong",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/jiaren/jiaren",
+                    "pathName": "pages/index/jiaren/jiaren",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/jiaren/food/food",
+                    "pathName": "pages/index/jiaren/food/food",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/rank/rank",
+                    "pathName": "pages/index/rank/rank",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/book/bookHouse/bookHouse",
+                    "pathName": "pages/index/book/bookHouse/bookHouse",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/house/houseDetail",
+                    "pathName": "pages/index/house/houseDetail",
+                    "query": "item=undefined",
+                    "scene": null
+                },
+                {
+                    "name": "pages/message/message",
+                    "pathName": "pages/message/message",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/cost/cost",
+                    "pathName": "pages/index/cost/cost",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/house/house",
+                    "pathName": "pages/index/house/house",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/commit/commit",
+                    "pathName": "pages/mine/commit/commit",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/commit/doCommit",
+                    "pathName": "pages/mine/commit/doCommit",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/photo/photoDetail",
+                    "pathName": "pages/photo/photoDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/photo/project/doProject",
+                    "pathName": "pages/photo/project/doProject",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/message/messageDetail",
+                    "pathName": "pages/message/messageDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/police",
+                    "pathName": "pages/index/police/police",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/policeType/policeType",
+                    "pathName": "pages/index/police/policeType/policeType",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/police/police",
+                    "pathName": "pages/index/police/police/police",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/dealPolice/dealPolice",
+                    "pathName": "pages/index/police/dealPolice/dealPolice",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/dealPolice/d",
+                    "pathName": "pages/index/police/dealPolice/",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/dealPolice/dealPolice",
+                    "pathName": "pages/index/police/dealPolice/dealPolice",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/police/dealPolice/dealDetail/dealDetail",
+                    "pathName": "pages/index/police/dealPolice/dealDetail/dealDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/index/book/bookSight/bookSight",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }
