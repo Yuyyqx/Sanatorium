@@ -1,72 +1,73 @@
 {
-  "pages": [
-    "pages/login/login",
-    "pages/index/index",
-    "pages/index/house/house",
-    "pages/index/house/houseDetail",
-    "pages/index/book/bookType",
-    "pages/index/hulian/hulian",
-    "pages/index/hugong/hugong",
-    "pages/index/jiaren/jiaren",
-    "pages/index/jiaren/food/food",
-    "pages/index/cost/cost",
-    "pages/index/book/bookSight/bookSight",
-    "pages/index/book/bookHouse/bookHouse",
-    "pages/index/rank/rank",
-    "pages/index/police/policeType/policeType",
-    "pages/index/police/police/police",
-    "pages/index/police/dealPolice/dealPolice",
-    "pages/index/police/dealPolice/dealDetail/dealDetail",
-    "pages/login/regist/regist",
-    "pages/login/regist/binding",
-    "pages/login/regist/bindingOld",
-    "pages/message/message",
-    "pages/message/messageDetail",
-    "pages/mine/mine",
-    "pages/mine/commit/commit",
-    "pages/mine/commit/doCommit",
-    "pages/mine/edit/information",
-    "pages/mine/real/real",
-    "pages/photo/photo",
-    "pages/photo/photoDetail",
-    "pages/photo/project/doProject"
-  ],
-  "subPackages": [],
-  "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
-  "tabBar": {
-    "selectedColor": "#3A9255",
-    "backgroundColor": "#fff",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "static/images/index1.png",
-        "selectedIconPath": "static/images/new2.png"
-      },
-      {
-        "pagePath": "pages/photo/photo",
-        "text": "监控",
-        "iconPath": "static/images/photo1.png",
-        "selectedIconPath": "static/images/new1.png"
-      },
-      {
-        "pagePath": "pages/message/message",
-        "text": "消息",
-        "iconPath": "static/images/message1.png",
-        "selectedIconPath": "static/images/new4.png"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "static/images/mine1.png",
-        "selectedIconPath": "static/images/new3.png"
-      }
-    ]
-  },
-  "usingComponents": {}
+    "pages": [
+        "pages/login/login",
+        "pages/index/index",
+        "pages/index/house/house",
+        "pages/index/house/houseDetail",
+        "pages/index/book/bookType",
+        "pages/index/hulian/hulian",
+        "pages/index/hugong/hugong",
+        "pages/index/jiaren/jiaren",
+        "pages/index/jiaren/food/food",
+        "pages/index/cost/cost",
+        "pages/index/book/bookSight/bookSight",
+        "pages/index/book/bookHouse/bookHouse",
+        "pages/index/rank/rank",
+        "pages/index/police/policeType/policeType",
+        "pages/index/police/police/police",
+        "pages/index/police/dealPolice/dealPolice",
+        "pages/index/police/dealPolice/dealDetail/dealDetail",
+        "pages/login/regist/regist",
+        "pages/login/regist/binding",
+        "pages/login/regist/bindingOld",
+        "pages/message/message",
+        "pages/message/messageDetail",
+        "pages/mine/mine",
+        "pages/mine/commit/commit",
+        "pages/mine/commit/doCommit",
+        "pages/mine/edit/information",
+        "pages/mine/real/real",
+        "pages/photo/photo",
+        "pages/photo/photoDetail",
+        "pages/photo/project/doProject"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "selectedColor": "#3A9255",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/images/index1.png",
+                "selectedIconPath": "static/images/new2.png"
+            },
+            {
+                "pagePath": "pages/photo/photo",
+                "text": "监控",
+                "iconPath": "static/images/photo1.png",
+                "selectedIconPath": "static/images/new1.png"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text": "消息",
+                "iconPath": "static/images/message1.png",
+                "selectedIconPath": "static/images/new4.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "static/images/mine1.png",
+                "selectedIconPath": "static/images/new3.png"
+            }
+        ]
+    },
+    "usingComponents": {},
+    "sitemapLocation": "sitemap.json"
 }

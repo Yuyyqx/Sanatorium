@@ -24,16 +24,22 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.flex-between.data-v-532d01c7 {
+.flex-between.data-v-643b3322 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.line.data-v-532d01c7 {
+.line.data-v-643b3322 {
   margin: 40rpx 0;
   border-bottom: 2rpx solid #f2f2f2;
 }
-.u-checkbox.data-v-532d01c7 {
+input[type="checkbox"].data-v-643b3322 {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"].data-v-643b3322 {
+  -webkit-appearance: radio;
+}
+.u-radio.data-v-643b3322 {
   display: inline-flex;
   align-items: center;
   overflow: hidden;
@@ -41,11 +47,11 @@
           user-select: none;
   line-height: 1.8;
 }
-.u-checkbox__icon-wrap.data-v-532d01c7 {
+.u-radio__icon-wrap.data-v-643b3322 {
   color: #606266;
-  flex: none;
   display: flex;
   flex-direction: row;
+  flex: none;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -58,32 +64,32 @@
   border: 1px solid #c8c9cc;
   transition-duration: 0.2s;
 }
-.u-checkbox__icon-wrap--circle.data-v-532d01c7 {
+.u-radio__icon-wrap--circle.data-v-643b3322 {
   border-radius: 100%;
 }
-.u-checkbox__icon-wrap--square.data-v-532d01c7 {
-  border-radius: 6rpx;
+.u-radio__icon-wrap--square.data-v-643b3322 {
+  border-radius: 3px;
 }
-.u-checkbox__icon-wrap--checked.data-v-532d01c7 {
+.u-radio__icon-wrap--checked.data-v-643b3322 {
   color: #fff;
   background-color: #2979ff;
   border-color: #2979ff;
 }
-.u-checkbox__icon-wrap--disabled.data-v-532d01c7 {
+.u-radio__icon-wrap--disabled.data-v-643b3322 {
   background-color: #ebedf0;
   border-color: #c8c9cc;
 }
-.u-checkbox__icon-wrap--disabled--checked.data-v-532d01c7 {
+.u-radio__icon-wrap--disabled--checked.data-v-643b3322 {
   color: #c8c9cc !important;
 }
-.u-checkbox__label.data-v-532d01c7 {
+.u-radio__label.data-v-643b3322 {
   word-wrap: break-word;
   margin-left: 10rpx;
   margin-right: 24rpx;
   color: #606266;
   font-size: 30rpx;
 }
-.u-checkbox__label--disabled.data-v-532d01c7 {
+.u-radio__label--disabled.data-v-643b3322 {
   color: #c8c9cc;
 }
 

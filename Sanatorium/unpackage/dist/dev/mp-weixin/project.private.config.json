@@ -251,6 +251,12 @@
                     "pathName": "pages/index/book/bookSight/bookSight",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/photo/project/doProject",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

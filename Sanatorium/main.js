@@ -12,6 +12,12 @@ import util from './utils/util.js'
 Vue.prototype.$util = util;
 //引入uView
 import uView from "uview-ui";
+
+// import "uni-colorui/lib/main.css";
+// import "uni-colorui/lib/icon.css";
+// import "uni-colorui/lib/animation.css";
+
+import cuCustom from 'uni-colorui/lib/components/cu-custom.vue'
 Vue.use(uView);
 
 Vue.config.productionTip = false

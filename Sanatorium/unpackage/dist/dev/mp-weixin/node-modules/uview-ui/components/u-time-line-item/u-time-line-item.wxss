@@ -33,6 +33,12 @@
   margin: 40rpx 0;
   border-bottom: 2rpx solid #f2f2f2;
 }
+input[type="checkbox"].data-v-dba4c432 {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"].data-v-dba4c432 {
+  -webkit-appearance: radio;
+}
 .u-time-axis-item.data-v-dba4c432 {
   display: flex;
   flex-direction: row;

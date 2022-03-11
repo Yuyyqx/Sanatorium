@@ -2,7 +2,6 @@
 	<view class="page">
 		<view class="bgConston" id="chatContent">
 			<view class="userSession">
-				<!-- :style="{height:sHeight+'rpx'}" -->
 				<view class="item" v-for="(item,index) in userContextItem" :key="index">
 					<view class="time">{{item.time}}</view>
 					<view class="userH" :class="{'userMe':item.userId == ''}">
@@ -89,7 +88,6 @@
 				//点击元素
 				eleId: "",
 				text: '',
-				lawyertitle: '',
 				sHeight: 500,
 				searchWord: '',
 				userContextItem: [ {

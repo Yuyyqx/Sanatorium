@@ -9,7 +9,7 @@
 				<view class="item">
 					<image src="../../../static/images/username.png"/>
 					<input placeholder="手机号" placeholder-style="color: #898989;" type="text" style="margin-top: 50rpx;" v-model="phone"/>
-					<text class="yzm">发送验证码</text>
+					<text class="yzm" @click="yzmClick()">发送验证码</text>
 				</view>
 				<view class="item">
 					<image src="../../../static/images/password.png"/>
@@ -17,7 +17,7 @@
 				</view>
 				<view class="item">
 					<image src="../../../static/images/yzm.png"/>
-					<input type="text" placeholder="验证码" placeholder-style="color: #898989;" style="margin-top: 50rpx;"/>
+					<input type="text" placeholder="验证码" placeholder-style="color: #898989;" style="margin-top: 50rpx;" v-model="yzmCode"/>
 				</view>
 			</view>
 			<view class="btn"@click="jumpTo()">
@@ -33,7 +33,8 @@
 			return {
 				state:0,
 				phone:'',
-				pwd:''
+				pwd:'',
+				yzmCode:''
 			}
 		},
 		onLoad() {
@@ -43,7 +44,8 @@
 			jumpTo(){
 				this.$api.login.registUser({
 					phone:this.phone,
-					pwd:this.pwd
+					pwd:this.pwd,
+					code:this.yzmCode
 					}
 				).then(res => {
 					console.log(res)
@@ -51,6 +53,7 @@
 						console.log(res.data);
 						uni.setStorageSync('userId', res.data.userId)
 						uni.navigateTo({
+							
 						 		url: './binding',
 								})
 					}
@@ -62,6 +65,23 @@
 				// })
 				})
 				
+			},
+			yzmClick(){
+				this.$api.login.sendYzm({
+					phone:this.phone,
+					}
+				).then(res => {
+					console.log(res)
+					if (res.msg == '成功' ) {
+						console.log(res.data);
+					}
+				}).catch(err => {
+				console.log(err);
+				// uni.showToast({
+				// 	title: '用户已注册,请登录', //后台返回的错误情况
+				// 	icon: 'none'
+				// })
+				})
 			}
 		}
 	}

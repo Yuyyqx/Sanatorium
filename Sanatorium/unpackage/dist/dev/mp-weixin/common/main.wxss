@@ -109,6 +109,12 @@
   margin: 40rpx 0;
   border-bottom: 2rpx solid #f2f2f2;
 }
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
 .u-relative,
 .u-rela {
   position: relative;

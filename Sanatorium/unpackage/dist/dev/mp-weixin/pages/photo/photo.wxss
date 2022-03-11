@@ -197,4 +197,8 @@ page {
 .report .report-item .click {
   color: #AAAAAA;
 }
+.wrap {
+  position: absolute;
+  right: 30rpx;
+}
 

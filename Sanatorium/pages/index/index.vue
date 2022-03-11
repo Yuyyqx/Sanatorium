@@ -287,6 +287,7 @@
 				  selectedIconPath: 'static/images/new1.png'
 				})
 			}
+			this.getData()
 			
 		},
 		methods: {
@@ -330,7 +331,21 @@
 				uni.navigateTo({
 					url:'police/policeType/policeType'
 				})
+			},
+			getData(){
+				this.$api.login.getOldList({
+					userId:uni.getStorageSync('userId'),
+					
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log(res.data);
+					}
+				}).catch(err => {
+				
+				})
 			}
+			
 
 		}
 	}

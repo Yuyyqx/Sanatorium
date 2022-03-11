@@ -33,6 +33,12 @@
   margin: 40rpx 0;
   border-bottom: 2rpx solid #f2f2f2;
 }
+input[type="checkbox"].data-v-01de4127 {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"].data-v-01de4127 {
+  -webkit-appearance: radio;
+}
 .u-rate.data-v-01de4127 {
   display: inline-flex;
   align-items: center;

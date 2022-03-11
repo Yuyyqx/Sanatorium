@@ -28,6 +28,7 @@
   margin-top: 20rpx;
   font-size: small;
   border-bottom: 1rpx solid #e7e7e7;
+  z-index: 100;
 }
 .item1 image {
   width: 30rpx;
@@ -81,5 +82,11 @@
   align-items: center;
   justify-content: center;
   background-color: #27aca3;
+}
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"] {
+  -webkit-appearance: radio;
 }
 

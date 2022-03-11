@@ -45,7 +45,7 @@ page {
 }
 .choose {
   margin-top: 20rpx;
-  width: 750rpx;
+  width: 730rpx;
   padding: 20rpx;
   background-color: #ffffff;
   height: 1100rpx;

@@ -719,6 +719,12 @@
   margin: 40rpx 0;
   border-bottom: 2rpx solid #f2f2f2;
 }
+input[type="checkbox"].data-v-172979f2 {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"].data-v-172979f2 {
+  -webkit-appearance: radio;
+}
 .u-icon.data-v-172979f2 {
   display: inline-flex;
   align-items: center;

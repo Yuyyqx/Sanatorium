@@ -15,6 +15,10 @@ const login = {
 	loginByPassword(params){
 		return request.httpRequest(`${base.url}/user/loginByPwd`,'POST',params)
 	},
+	//手机号+验证码登录
+	loginByPhone(params){
+		return request.httpRequest(`${base.url}/user/loginByPhone`,'POST',params)
+	},
 	//注册用户
 	registUser(params){
 		return request.httpRequest(`${base.url}/user/register`,'POST',params)
@@ -26,6 +30,14 @@ const login = {
 	//绑定老人
 	bindingOld(params){
 		return request.httpRequest(`${base.url}/user/bindOld`,'POST',params)
+	},
+	//绑定老人
+	sendYzm(params){
+		return request.httpRequest(`${base.url}/user/sendCode`,'GET',params)
+	},
+	//获取用户所绑定老人
+	getOldList(params){
+		return request.httpRequest(`${base.url}/user/getBindOldList`,'POST',params)
 	}
 }
 

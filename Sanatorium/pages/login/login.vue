@@ -25,11 +25,11 @@
 				<view class="item" style="padding-bottom: 8rpx;">
 					<text class="china">中国+86 </text>
 					<input placeholder="手机号" placeholder-style="color: #898989;" type="text"
-						style="margin-top: 50rpx;" />
+						style="margin-top: 50rpx;" v-model="phone"/>
 				</view>
 				<view class="item" style="padding-bottom: 8rpx;">
 					<input type="text" placeholder="验证码" placeholder-style="color: #898989;"
-						style="margin-top: 50rpx;" />
+						style="margin-top: 50rpx;" v-model="code"/>
 					<text class="yzm">发送验证码</text>
 				</view>
 			</view>
@@ -51,8 +51,10 @@
 			return {
 				state: 0,
 				way: 0,
-				num:'123456',
-				pwd:'123456'
+				num:'13397636586',
+				pwd:'123456',
+				phone:'',
+				code:''
 			}
 		},
 		onLoad() {
@@ -84,6 +86,7 @@
 							console.log(res.data);
 							if(res.data.userRole==1){
 								uni.setStorageSync('change', 0)
+								uni.setStorageSync('userId', res.data.userId)
 								uni.reLaunch({
 									url: '../index/index?change=0'
 								});
@@ -95,6 +98,49 @@
 							else
 							if (res.data.userRole==0) {
 								uni.setStorageSync('change', 1)
+								uni.setStorageSync('userId', res.data.userId)
+								uni.reLaunch({
+									url: '../index/index?change=1'
+								});
+								uni.switchTab({
+									url: '../index/index',
+								})
+							
+							}
+						} else {
+							this.$refs.uToast.show({
+								title: '不存在该用户',
+								type: 'error',
+								
+							})
+						}
+					}).catch(err => {
+					
+					})
+				}else if(this.way==1){ //验证码登录
+				console.log('way+',this.way)
+					this.$api.login.loginByPhone({
+						phone:this.phone,
+						code:this.code
+						}
+					).then(res => {
+						if (res.msg == '成功' ) {
+							console.log(res.data);
+							if(res.data.userRole==1){
+								uni.setStorageSync('change', 0)
+								uni.setStorageSync('userId', res.data.userId)
+								uni.reLaunch({
+									url: '../index/index?change=0'
+								});
+								
+								uni.switchTab({
+									url: '../index/index',
+								})
+							}
+							else
+							if (res.data.userRole==0) {
+								uni.setStorageSync('change', 1)
+								uni.setStorageSync('userId', res.data.userId)
 								uni.reLaunch({
 									url: '../index/index?change=1'
 								});

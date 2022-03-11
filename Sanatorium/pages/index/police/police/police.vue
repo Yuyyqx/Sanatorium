@@ -26,18 +26,28 @@
 			</view>
 			<view class="item1">
 				<text>求助对象</text>
-				<u-checkbox-group v-model="checkboxValue1" placement="row" @change="checkboxChange" >
-					<u-checkbox :customStyle="{marginBottom: '8px'}" v-for="(item, index) in checkboxList1" :key="index"
-						:label="item.name" :name="item.name" >{{item.name}}
-					</u-checkbox>
-				</u-checkbox-group>
+				 <u-radio-group
+				    v-model="radiovalue1"
+				    placement="column"
+				    @change="groupChange"
+				  >
+				    <u-radio
+				      :customStyle="{marginBottom: '8px'}"
+				      v-for="(item, index) in radiolist1"
+				      :key="index"
+				      :label="item.name"
+				      :name="item.name"
+				      @change="radioChange"
+				    >{{item.name}}
+				    </u-radio>
+				  </u-radio-group>
 				
 			</view>
 			<view class="item1">
 				<text>报警时间</text>
 				<view class="card">
-					<text>2021/12/3 19：04</text>
-					<image src="../../../../static/images/house3.png" />
+					<text>{{time}}</text>
+					<!-- <image src="../../../../static/images/house3.png" /> -->
 				</view>
 			</view>
 			<view class="item">
@@ -94,9 +104,9 @@
 					}
 				],
 				type: '户外摔倒',
-				checkboxValue1: [],
+				radiovalue1: '',
 				// 基本案列数据
-				checkboxList1: [{
+				radiolist1: [{
 						name: '疗养院',
 						disabled: false
 					},
@@ -109,15 +119,19 @@
 						disabled: false
 					}
 				],
-
+				time: ''
 			}
 		},
 		onLoad() {
-
+			this.getTime()
 		},
 		methods: {
 			submit() {
-				this.$refs.uUpload.upload();
+				// this.$refs.uUpload.upload();
+				uni.showToast({
+					title:'已提交',
+					icon:'none'
+				})
 			},
 			addInfo() {
 				let that = this
@@ -181,16 +195,42 @@
 					imgList: imgList
 				})
 			},
-			titlePicker(e) {
-				this.title = this.title_list[e.target.value].name
+			typePicker(e) {
+				this.type = this.type_list[e.target.value].name
 				console.log(this.title_list[e.target.value].id) //获取id
 				this.status = 1
 
 			},
+			peoplePicker(e) {
+				this.people = this.people_list[e.target.value].name
+				console.log(this.people_list[e.target.value].id) //获取id
+				this.status = 1
+			
+			},
 			checkboxChange(n) {
 				console.log('change', n);
-			}
-
+			},
+		      groupChange(n) {
+		        console.log('groupChange', n);
+		      },
+		      radioChange(n) {
+		        console.log('radioChange', n);
+		      },
+			  getTime(){
+			  var date = new Date(),
+			  year = date.getFullYear(),
+			  month = date.getMonth() + 1,
+			  day = date.getDate(),
+			  hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours(),
+			  minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes(),
+			  second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+			  month >= 1 && month <= 9 ? (month = "0" + month) : "";
+			  day >= 0 && day <= 9 ? (day = "0" + day) : "";
+	
+			  this.time = year + '-' + month + '-' + day+ '-' + hour + ':' + minute + ':' + second;
+			  
+			  },
+			
 		}
 	}
 </script>
@@ -232,7 +272,7 @@
 		margin-top: 20rpx;
 		font-size: small;
 		border-bottom: 1rpx solid#e7e7e7;
-
+		z-index: 100;
 		image {
 			width: 30rpx;
 			height: 30rpx;
@@ -298,5 +338,12 @@
 		align-items: center;
 		justify-content: center;
 		background-color: rgb(39, 172, 163);
+	}
+	input[type="checkbox"] {
+	    -webkit-appearance: checkbox;
+	}
+	
+	input[type="radio"] {
+	    -webkit-appearance: radio;
 	}
 </style>

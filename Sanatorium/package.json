@@ -4,6 +4,7 @@
   "description": "vote\r ===============",
   "main": "main.js",
   "dependencies": {
+    "uni-colorui": "^2.1.7",
     "uview-ui": "^1.8.4"
   },
   "devDependencies": {

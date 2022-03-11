@@ -21,36 +21,36 @@
 			<view class="item">
 				<view class="box"/>
 				<text>呼吸：</text>
-				<input type="text" placeholder-style="color:#898989;text-align:right"
+				<input type="text" placeholder-style="color:#ababab;text-align:right"
 					style="text-align: right;position: absolute;right: 50rpx;" placeholder="例:15次/min"  />
 			</view>
 			<view class="item">
 				<view class="box"/>
 				<text>脉搏：</text>
-				<input type="text" placeholder-style="color:#898989;text-align:right"
+				<input type="text" placeholder-style="color:#ababab;text-align:right"
 					style="text-align: right;position: absolute;right: 50rpx;" placeholder="例:15次/min"  />
 			</view><view class="item">
 			<view class="box"/>
 				<text>血压：</text>
-				<input type="text" placeholder-style="color:#898989;text-align:right"
+				<input type="text" placeholder-style="color:#ababab;text-align:right"
 					style="text-align: right;position: absolute;right: 50rpx;" placeholder="例:120/120"  />
 			</view>
 			<view class="item">
 				<view class="box"/>
 				<text>饮食：</text>
-				<input type="text" placeholder-style="color:#898989;text-align:right"
+				<input type="text" placeholder-style="color:#ababab;text-align:right"
 					style="text-align: right;position: absolute;right: 50rpx;" placeholder="例:220g"  />
 			</view>
 			<view class="item">
 				<view class="box"/>
 				<text>排尿：</text>
-				<input type="text" placeholder-style="color:#898989;text-align:right"
+				<input type="text" placeholder-style="color:#ababab;text-align:right"
 					style="text-align: right;position: absolute;right: 50rpx;" placeholder="例:正常"  />
 			</view>
 			<view class="item">
 				<view class="box"/>
 				<text>排便：</text>
-				<input type="text" placeholder-style="color:#898989;text-align:right"
+				<input type="text" placeholder-style="color:#ababab;text-align:right"
 					style="text-align: right;position: absolute;right: 50rpx;" placeholder="例:正常"  />
 			</view>
 			
@@ -158,7 +158,7 @@
 
 	.choose {
 		margin-top: 20rpx;
-		width: 750rpx;
+		width: 730rpx;
 		padding: 20rpx;
 		background-color: #ffffff;
 		height: 1100rpx;

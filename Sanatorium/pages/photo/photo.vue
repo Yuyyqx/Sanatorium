@@ -10,7 +10,7 @@
 				</view>
 				<scroll-view scroll-x="true" class="scroll">
 					<view style="display: flex;">
-						<view class="item" v-for="item in list" :key="index" @click="gotoDetail()">
+						<view class="item" v-for="item in list" :key="item.id" @click="gotoDetail()">
 							<view class="box">
 								<image :src="item.imgUrl" />
 							</view>
@@ -22,14 +22,18 @@
 			<view class="mid">
 				<image src="../../static/images/tv.png" />
 				<text>实时监控</text>
+				<view class="wrap">
+					<u-switch v-model="value1" activeColor="#5ac725" size="30"  ></u-switch>
+				</view>
 			</view>
 			<view class="down">
-				<view class="down-item" v-for="item in downList" :key="index" @click="gotoDetail()">
+				<view class="down-item" v-for="item in downList" :key="item.id" @click="gotoDetail()">
 					<image :src="item.imgUrl" />
 					<text class="item-up">{{item.name}}</text>
 					<text class="item-down">{{item.add}}</text>
 				</view>
 			</view>
+
 		</view>
 
 		<!-- 护工端 -->
@@ -52,7 +56,7 @@
 				</view>
 			</view>
 			<view class="report">
-				<view class="report-item" v-for="item in reportList" :key="index" @click="projectDetail()">
+				<view class="report-item" v-for="item in reportList" :key="item.id" @click="projectDetail()">
 					<view class="report-item-up">
 						<image :src="item.iconUrl" />
 						<text>{{item.name}}</text>
@@ -156,7 +160,8 @@
 					finish:1,
 					deadTime:'13：30',
 					type:'每日任务'
-				},]
+				},],
+				value1: true,
 			}
 		},
 		onLoad() {
@@ -202,7 +207,11 @@
 				uni.navigateTo({
 					url:'project/doProject'
 				})
-			}
+			},
+			change(e) {
+				console.log('change', e);
+			},
+
 		},
 		
 	}
@@ -440,5 +449,9 @@
 				
 			}
 		}
+	}
+	.wrap{
+		position: absolute;
+		right: 30rpx;
 	}
 </style>
