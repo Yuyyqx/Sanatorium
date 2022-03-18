@@ -148,13 +148,13 @@ var _default =
     return {
       title: 'video',
       src: '',
-      inputValue: '' };
-
+      inputValue: '',
+      videoUrl: '' };
 
 
   },
   onLoad: function onLoad() {
-
+    this.getVideo();
   },
   onReady: function onReady(res) {
     this.videoContext = uni.createVideoContext('myVideo');
@@ -192,6 +192,21 @@ var _default =
         rgb.push(color);
       }
       return '#' + rgb.join('');
+    },
+    //接口
+    getVideo: function getVideo() {var _this = this;
+      this.$api.photo.getPhoto({
+        oldId: '3768232053' }).
+
+      then(function (res) {
+        if (res.msg == '成功') {
+          console.log(res.data);
+          console.log('aaaaaa', res.data[0].file);
+          _this.videoUrl = res.data[0].file;
+        }
+      }).catch(function (err) {
+
+      });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

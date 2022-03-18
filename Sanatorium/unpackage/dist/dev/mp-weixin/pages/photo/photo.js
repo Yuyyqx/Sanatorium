@@ -320,7 +320,7 @@ var _default =
 
   },
   onLoad: function onLoad() {
-
+    //控制tab
     this.change = uni.getStorageSync('change');
     console.log(this.change);
     if (this.change === 1) {
@@ -342,6 +342,10 @@ var _default =
 
 
     }
+    //获取数据
+    // this.getOldList()
+
+
   },
   methods: {
     gotoDetail: function gotoDetail() {
@@ -362,10 +366,36 @@ var _default =
       uni.navigateTo({
         url: 'project/doProject' });
 
-    },
-    change: function change(e) {
-      console.log('change', e);
-    } } };exports.default = _default;
+    }
+    // change(e) {
+    // 	console.log('change', e);
+    // },
+    //接口
+    // getPhotoList(){
+    // 	this.$api.photo.getPhoto({
+    // 		oldId:this.num,
+    // 		}
+    // 	).then(res => {
+    // 		console.log(res)
+    // 		}
+    // 	}).catch(err => {
+
+    // 	})
+    // }
+    // getOldList(){
+    // 	this.$api.login.getOldList({
+    // 		userId:uni.getStorageSync('userId'),
+
+    // 		}
+    // 	).then(res => {
+    // 		if (res.msg == '成功' ) {
+    // 			console.log(res.data);
+    // 		}
+    // 	}).catch(err => {
+
+    // 	})
+    // }
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

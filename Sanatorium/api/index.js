@@ -3,8 +3,10 @@
  */
 // 其他模块的接口……
 import login from './login/login.js'
+import photo from './photo/photo.js'
 
 // 导出接口
 export default {    
-	login
+	login,
+	photo
 }

@@ -165,7 +165,7 @@
 			}
 		},
 		onLoad() {
-
+			//控制tab
 			this.change = uni.getStorageSync('change')
 			console.log(this.change)
 			if (this.change === 1) {
@@ -187,6 +187,10 @@
 					}
 				})
 			}
+			//获取数据
+			// this.getOldList()
+			
+			
 		},
 		methods: {
 			gotoDetail() {
@@ -208,10 +212,34 @@
 					url:'project/doProject'
 				})
 			},
-			change(e) {
-				console.log('change', e);
-			},
-
+			// change(e) {
+			// 	console.log('change', e);
+			// },
+			//接口
+			// getPhotoList(){
+			// 	this.$api.photo.getPhoto({
+			// 		oldId:this.num,
+			// 		}
+			// 	).then(res => {
+			// 		console.log(res)
+			// 		}
+			// 	}).catch(err => {
+				
+			// 	})
+			// }
+			// getOldList(){
+			// 	this.$api.login.getOldList({
+			// 		userId:uni.getStorageSync('userId'),
+					
+			// 		}
+			// 	).then(res => {
+			// 		if (res.msg == '成功' ) {
+			// 			console.log(res.data);
+			// 		}
+			// 	}).catch(err => {
+				
+			// 	})
+			// }
 		},
 		
 	}

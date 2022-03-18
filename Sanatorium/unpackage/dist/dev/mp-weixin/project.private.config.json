@@ -257,6 +257,12 @@
                     "pathName": "pages/photo/project/doProject",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/photo/photo",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

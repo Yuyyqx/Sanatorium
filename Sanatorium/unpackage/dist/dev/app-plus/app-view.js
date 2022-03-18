@@ -14988,12 +14988,7 @@ var render = function() {
             { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
             [
               _c("v-uni-video", {
-                attrs: {
-                  id: "myVideo",
-                  src:
-                    "http://tangbucker.oss-cn-hangzhou.aliyuncs.com/CareHome/Video/1645775922956774.mp4?Expires=1647923406&OSSAccessKeyId=LTAI5tNju6tSVYrD6ivwm9TZ&Signature=bkeXXINSUP6I7PpxObTT8uqoLJQ%3D",
-                  _i: 3
-                },
+                attrs: { id: "myVideo", src: _vm._$g(3, "a-src"), _i: 3 },
                 on: {
                   error: function($event) {
                     return _vm.$handleViewEvent($event)

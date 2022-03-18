@@ -2,7 +2,7 @@
 	<view class="content">
 		  <view class="page-body">
 		            <view class="page-section">
-		                <video id="myVideo" src="http://tangbucker.oss-cn-hangzhou.aliyuncs.com/CareHome/Video/1645775922956774.mp4?Expires=1647923406&OSSAccessKeyId=LTAI5tNju6tSVYrD6ivwm9TZ&Signature=bkeXXINSUP6I7PpxObTT8uqoLJQ%3D" @error="videoErrorCallback" ></video>
+		                <video id="myVideo" :src="videoUrl" @error="videoErrorCallback" ></video>
 		            </view>
 		        </view>
 
@@ -15,14 +15,14 @@
 		data() {
 			return {
 				 title: 'video',
-				            src: '',
-				            inputValue: '',     
-							
+				 src: '',
+				 inputValue: '',     
+				 videoUrl:''		
  			}
 			
 		},
 		onLoad() {
-
+			this.getVideo()
 		},
 	   onReady: function (res) {
 	        this.videoContext = uni.createVideoContext('myVideo')
@@ -61,7 +61,21 @@
 	            }
 	            return '#' + rgb.join('')
 	        },
-
+			//接口
+			getVideo(){
+				this.$api.photo.getPhoto({
+					oldId:'3768232053',
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log(res.data);
+						console.log('aaaaaa',res.data[0].file)
+						this.videoUrl = res.data[0].file
+					}
+				}).catch(err => {
+				
+				})
+			}
 	},
 	}
 </script>
