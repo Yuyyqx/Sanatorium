@@ -9058,12 +9058,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 var _login = _interopRequireDefault(__webpack_require__(/*! ./login/login.js */ 13));
-var _photo = _interopRequireDefault(__webpack_require__(/*! ./photo/photo.js */ 363));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /** 
-                                                                                                                                                                * api接口的统一出口
-                                                                                                                                                                */ // 其他模块的接口……
+var _photo = _interopRequireDefault(__webpack_require__(/*! ./photo/photo.js */ 363));
+var _message = _interopRequireDefault(__webpack_require__(/*! ./message/message.js */ 403));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /** 
+                                                                                                                                                                      * api接口的统一出口
+                                                                                                                                                                      */ // 其他模块的接口……
 // 导出接口
 var _default = { login: _login.default,
-  photo: _photo.default };exports.default = _default;
+  photo: _photo.default,
+  message: _message.default };exports.default = _default;
 
 /***/ }),
 
@@ -18847,6 +18849,28 @@ function randomArray() {var array = arguments.length > 0 && arguments[0] !== und
 }var _default =
 
 randomArray;exports.default = _default;
+
+/***/ }),
+
+/***/ 403:
+/*!********************************************************************************!*\
+  !*** C:/Users/lizhuotian/Desktop/Sanatorium/Sanatorium/api/message/message.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/request.js */ 14));
+var _qs = _interopRequireDefault(__webpack_require__(/*! qs */ 17));
+var _base = _interopRequireDefault(__webpack_require__(/*! ../base.js */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 根据需求是否导入qs模块
+var message = {
+  //获取所有消息列表
+  getChatDetail: function getChatDetail(params) {
+    return _request.default.httpRequest("".concat(_base.default.url, "/app/chat/getChats"), 'GET', params);
+  } };var _default =
+
+
+message;exports.default = _default;
 
 /***/ }),
 
