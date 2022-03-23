@@ -51,7 +51,8 @@
 			return {
 				state: 0,
 				way: 0,
-				num:'13397636586',
+				// num:'13397636586',
+				num:'123456',
 				pwd:'123456',
 				phone:'',
 				code:''
@@ -74,7 +75,7 @@
 					url: '/pages/login/regist/regist',
 				})
 			},
-			loginClick() {
+loginClick() {
 				if(this.way==0){ //密码登录
 				console.log('way+',this.way)
 					this.$api.login.loginByPassword({
@@ -84,9 +85,10 @@
 					).then(res => {
 						if (res.msg == '成功' ) {
 							console.log(res.data);
-							if(res.data.userRole==1){
+							if(res.data.user.userRole==1){
 								uni.setStorageSync('change', 0)
-								uni.setStorageSync('userId', res.data.userId)
+								uni.setStorageSync('userId', res.data.user.userId)
+								uni.setStorageSync('userList', res.data)
 								uni.reLaunch({
 									url: '../index/index?change=0'
 								});
@@ -96,9 +98,10 @@
 								})
 							}
 							else
-							if (res.data.userRole==0) {
+							if (res.data.user.userRole==0) {
 								uni.setStorageSync('change', 1)
-								uni.setStorageSync('userId', res.data.userId)
+								uni.setStorageSync('userId', res.data.user.userId)
+								uni.setStorageSync('userList', res.data)
 								uni.reLaunch({
 									url: '../index/index?change=1'
 								});
@@ -126,9 +129,10 @@
 					).then(res => {
 						if (res.msg == '成功' ) {
 							console.log(res.data);
-							if(res.data.userRole==1){
+							if(res.data.user.userRole==1){
 								uni.setStorageSync('change', 0)
-								uni.setStorageSync('userId', res.data.userId)
+								uni.setStorageSync('userId', res.data.user.userId)
+								uni.setStorageSync('userList', res.data)
 								uni.reLaunch({
 									url: '../index/index?change=0'
 								});
@@ -138,9 +142,10 @@
 								})
 							}
 							else
-							if (res.data.userRole==0) {
+							if (res.data.user.userRole==0) {
 								uni.setStorageSync('change', 1)
-								uni.setStorageSync('userId', res.data.userId)
+								uni.setStorageSync('userId', res.data.user.userId)
+								uni.setStorageSync('userList', res.data)
 								uni.reLaunch({
 									url: '../index/index?change=1'
 								});

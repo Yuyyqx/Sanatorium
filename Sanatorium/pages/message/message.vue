@@ -62,7 +62,7 @@
 			<view class="down">
 				<view class="item" v-for="(item,index) in list" :key="index" @click="gotoDetail()">
 					<view class="left">
-						<image  :src="item.picUrl" />
+						<image :src="item.picUrl" />
 					</view>
 					<view :class="[list.length==index+1? 'right':'right1']">
 						<view class="right-left">
@@ -78,7 +78,7 @@
 									<text>{{item.type}}</text>
 								</view>
 							</view>
-							
+
 							<text class="item-content">{{item.content}}</text>
 						</view>
 
@@ -126,15 +126,15 @@
 						type: '家属',
 						red: 0
 					},
-/* 					{
-						id: 3,
-						picUrl: '../../static/images/tx.png',
-						name: '钱玉亲属',
-						content: '昨天的任务完成得很好！',
-						date: '昨天',
-						type: '家属',
-						red: 0
-					}, */
+					/* 					{
+											id: 3,
+											picUrl: '../../static/images/tx.png',
+											name: '钱玉亲属',
+											content: '昨天的任务完成得很好！',
+											date: '昨天',
+											type: '家属',
+											red: 0
+										}, */
 					{
 						id: 4,
 						picUrl: '../../static/images/house5.jpg',
@@ -167,13 +167,39 @@
 					selectedIconPath: 'static/images/task4.png'
 				})
 			}
+			//接口
+			this.getChatList()
+
 		},
 		methods: {
 			gotoDetail() {
 				uni.navigateTo({
 					url: 'messageDetail'
 				})
+			},
+			getChatList() {
+				console.log('进方法了')
+				this.$api.message.getChatDetail({
+					userId: uni.getStorageSync('userId'),
+				}).then(res => {
+					if (res.msg == '成功') {
+						console.log('chatList', res);
+					}
+				}).catch(err => {
+
+				})
 			}
+			// getPhotoList(){
+			// 	this.$api.photo.getPhoto({
+			// 		oldId:this.num,
+			// 		}
+			// 	).then(res => {
+			// 		console.log(res)
+			// 		}
+			// 	}).catch(err => {
+
+			// 	})
+			// }
 		}
 	}
 </script>
@@ -247,8 +273,8 @@
 	.left image {
 		width: 100rpx;
 		height: 100rpx;
-		border-radius:50%;
-	}	
+		border-radius: 50%;
+	}
 
 	.right {
 		width: 670rpx;

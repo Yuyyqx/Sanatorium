@@ -2,9 +2,9 @@
 	<view class="content">
 		<!-- 上方 -->
 		<view class="bottom">
-			<view class="bottom-item">
+			<view class="bottom-item" style="height:100rpx">
 				<text>头像</text>
-				<image class="touxiang" src="../../../static/images/tx.png" />
+				<image class="touxiang" :src="userList.userInfo[0].userAvatar" />
 			</view>
 			<view class="line" />
 			<view class="bottom-item">
@@ -88,11 +88,15 @@
 	export default {
 		data() {
 			return {
-				status: 0
+				status: 0,
+				userList:[]
 			}
 		},
 		onLoad() {
-
+			//获取资料
+			
+			this.userList = uni.getStorageSync('userList')
+			console.log('userList',this.userList)
 		},
 		methods: {
 			jumpTo(){
@@ -141,7 +145,11 @@
 		.touxiang {
 			width: 100rpx;
 			height: 100rpx;
-			margin-left: 520rpx;
+			border-radius: 50%;
+			// border: 1rpx solid#333333;
+			position: absolute;
+			right:50rpx;
+			margin: 30rpx 0rpx 30rpx 0rpx ;
 		}
 	}
 

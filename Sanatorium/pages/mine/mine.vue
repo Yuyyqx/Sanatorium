@@ -5,10 +5,10 @@
 		<view class="content" v-if="change===0">
 			<view class="top">
 				<view class="up">
-					<image class="image" src="../../static/images/tx.png" />
+					<image class="image" :src="userList.userInfo[0].userAvatar" />
 					<view class="title">
 						<view class="title-first">
-							<text>家属端</text>
+							<text>{{userList.user.userName}}</text>
 							<image v-if="status==1" src="../../static/images/ok.jpg" />
 							<view class="unShure" v-if="status==0">
 								<text>未实名</text>
@@ -156,7 +156,7 @@
 			return {
 				status: 1,
 				change: 0, //0为家属端，1为护工端
-				
+				userList:[]
 			}
 		},
 		onLoad() {
@@ -170,6 +170,10 @@
 			  selectedIconPath: 'static/images/task4.png'
 			})
 			}
+			
+			//获取资料
+			this.userList = uni.getStorageSync('userList')
+			console.log('userList',this.userList)
 		},
 		methods: {
 			gotoInformation() {
@@ -225,9 +229,10 @@
 	}
 
 	.image {
-		width: 155rpx;
-		height: 155rpx;
+		width: 145rpx;
+		height: 145rpx;
 		border-radius: 50%;
+		/* border: 1rpx solid#333333; */
 	}
 
 	.title {
@@ -278,7 +283,8 @@
 	.icon {
 		width: 35rpx;
 		height: 35rpx;
-		margin-left: 200rpx;
+		position: absolute;
+		right: 50rpx;
 		margin-top: 20rpx;
 	}
 

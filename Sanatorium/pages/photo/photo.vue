@@ -162,6 +162,8 @@
 					type:'每日任务'
 				},],
 				value1: true,
+				oldIdList:[],
+				robertList:[]
 			}
 		},
 		onLoad() {
@@ -188,8 +190,8 @@
 				})
 			}
 			//获取数据
-			// this.getOldList()
-			
+			this.getOldList()
+			this.getRobert()
 			
 		},
 		methods: {
@@ -215,6 +217,7 @@
 			// change(e) {
 			// 	console.log('change', e);
 			// },
+			
 			//接口
 			// getPhotoList(){
 			// 	this.$api.photo.getPhoto({
@@ -227,14 +230,102 @@
 				
 			// 	})
 			// }
-			// getOldList(){
-			// 	this.$api.login.getOldList({
-			// 		userId:uni.getStorageSync('userId'),
+			getPhotoList(){
+				for(let s in this.oldIdList){
+					this.$api.photo.getPhoto({
+					oldId:this.oldIdList[s],
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log('该老人监控',res.data);
+						for(let s in res.data){
+							if(res.data[s].status!='正常！'){
+								console.log('这里要报警')
+								this.judgeChat(res.data[s].oldId,res.data[s].status)
+							}
+						}
+					}
+				}).catch(err => {
+				
+				})
+				}
+				
+			},
+			getOldList(){
+				this.$api.login.getOldList({
+					userId:uni.getStorageSync('userId'),
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log('oldList',res.data);
+						let arr = res.data.bindOldList
+						for(let s in arr){
+							this.oldIdList.push(arr[s].oldId)
+						}
+						console.log('oldIdList',this.oldIdList)
+						this.getPhotoList()
+					}
+				}).catch(err => {
+				
+				})
+			},
+			//报警流程
+			//获取所有机器人id
+			getRobert(){
+				this.$api.photo.getRobert().then(res => {
+					if (res.msg == '成功' ) {
+						console.log('robertList',res.data);
+					}
+				}).catch(err => {
+				
+				})
+			},
+			//判断是否第一次发消息
+			judgeChat(oldId,status){
+				this.$api.photo.judgeChat({
+					userIdA:uni.getStorageSync('userId'),
+					userIdB:oldId
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log(oldId+'judgeWhether',res.data);
+						if(res.data==true){
+							this.initChat(status)
+						}else{
+							this.addChat(status)
+						}
+					}
+				}).catch(err => {
+				
+				})
+			},
+			initChat(status){
+				console.log('status',status)
+				this.$api.photo.initChat({
+					chatContent:'您的老人'+status,
+					chatContentUserID:'0000000001',
+					chatMainUserId:uni.getStorageSync('userId'),
+					chatOtherUserId:'0000000001',
+					}
+				).then(res => {
+				
+						console.log('产生聊天列表',res.data);
+
 					
+				}).catch(err => {
+				
+				})
+			},
+			// addChat(status){
+			// 	this.$api.photo.initChat({
+			// 		chatContent:'您的老人'+status,
+			// 		chatMessageId:res2.data.chatMessageId,
+			// 		sendId:'0000000001',
 			// 		}
-			// 	).then(res => {
-			// 		if (res.msg == '成功' ) {
-			// 			console.log(res.data);
+			// 	).then(res3 => {
+			// 		if (res3.msg == '成功' ) {
+			// 			console.log('添加聊天',res3.data);
+				
 			// 		}
 			// 	}).catch(err => {
 				

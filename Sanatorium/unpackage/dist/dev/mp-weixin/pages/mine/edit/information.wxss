@@ -27,7 +27,10 @@ page {
 .bottom-item .touxiang {
   width: 100rpx;
   height: 100rpx;
-  margin-left: 520rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: 50rpx;
+  margin: 30rpx 0rpx 30rpx 0rpx ;
 }
 .right {
   position: absolute;
