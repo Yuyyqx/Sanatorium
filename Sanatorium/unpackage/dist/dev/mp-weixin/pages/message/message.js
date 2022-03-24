@@ -283,9 +283,11 @@ var _default =
         content: '恭喜开通app！',
         date: '昨天',
         type: '系统通知',
-        red: 0 }] };
+        red: 0 }],
 
 
+      chatList: [],
+      totalList: [] };
 
   },
   onLoad: function onLoad() {
@@ -304,18 +306,40 @@ var _default =
 
   },
   methods: {
-    gotoDetail: function gotoDetail() {
-      uni.navigateTo({
-        url: 'messageDetail' });
+    gotoDetail: function gotoDetail(index) {
+      // let List = this.chatList
+      // let id = List[index].chatMessageId
+      // let name = '消息ID 1676742816'
+      //  let obj= Object.create(null);
 
+      //    for (let[k,v] of this.totalList) {
+
+      //      obj[k] = v;
+
+      //     }
+
+      //    let JsonStr = JSON.stringify(obj);
+      //    console.log(JsonStr)
+      console.log(this.totalList[index]);
+      // console.log(this.totalList.get(name))assertEquals("A", getKeyByLoop(map, 1));
+      // uni.navigateTo({
+      // 	url: 'messageDetail?chatItem = '+this.totalList[index]
+      // })
     },
-    getChatList: function getChatList() {
-      console.log('进方法了');
+    getChatList: function getChatList() {var _this = this;
       this.$api.message.getChatDetail({
         userId: uni.getStorageSync('userId') }).
       then(function (res) {
         if (res.msg == '成功') {
           console.log('chatList', res);
+          _this.totalList = res.data;
+          var arr = res.data.chatList;
+          for (var s in arr) {
+            arr[s].lastMessageTime = arr[s].lastMessageTime.slice(5, 10) + " " + arr[s].lastMessageTime.slice(11, 16);
+          }
+          // console.log(arr)
+          _this.chatList = arr;
+
         }
       }).catch(function (err) {
 

@@ -23,6 +23,10 @@ const photo = {
 	addChat(params){
 		return request.httpRequest(`${base.url}/chat/insertChatDetail`,'POST',params)
 	},
+	//修改报警视频状态
+	changeStatus(params){
+		return request.httpRequest(`${base.url}/picture/updateAlarmStatus`,'POST',params)
+	},
 }
 
 export default photo;

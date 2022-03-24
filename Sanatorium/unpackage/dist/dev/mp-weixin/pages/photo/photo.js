@@ -394,9 +394,9 @@ var _default =
           if (res.msg == '成功') {
             console.log('该老人监控', res.data);
             for (var _s in res.data) {
-              if (res.data[_s].status != '正常！') {
+              if (res.data[_s].status != '正常！' && res.data[_s].operationStatus == -1) {
                 console.log('这里要报警');
-                _this.judgeChat(res.data[_s].oldId, res.data[_s].status);
+                _this.judgeChat(res.data[_s].oldId, res.data[_s].status, res.data[_s].videoId);
               }
             }
           }
@@ -436,7 +436,8 @@ var _default =
       });
     },
     //判断是否第一次发消息
-    judgeChat: function judgeChat(oldId, status) {var _this3 = this;
+    judgeChat: function judgeChat(oldId, status, videoId) {var _this3 = this;
+      console.log('走接口了吗');
       this.$api.photo.judgeChat({
         userIdA: uni.getStorageSync('userId'),
         userIdB: oldId }).
@@ -445,16 +446,16 @@ var _default =
         if (res.msg == '成功') {
           console.log(oldId + 'judgeWhether', res.data);
           if (res.data == true) {
-            _this3.initChat(status);
+            _this3.initChat(status, videoId);
           } else {
-            _this3.addChat(status);
+            _this3.addChat(status, videoId);
           }
         }
       }).catch(function (err) {
 
       });
     },
-    initChat: function initChat(status) {
+    initChat: function initChat(status, videoId) {var _this4 = this;
       console.log('status', status);
       this.$api.photo.initChat({
         chatContent: '您的老人' + status,
@@ -463,30 +464,43 @@ var _default =
         chatOtherUserId: '0000000001' }).
 
       then(function (res) {
-
-        console.log('产生聊天列表', res.data);
-
+        console.log('产生聊天列表', res);
+        _this4.addChat(res.data, status, videoId);
 
       }).catch(function (err) {
 
       });
-    }
-    // addChat(status){
-    // 	this.$api.photo.initChat({
-    // 		chatContent:'您的老人'+status,
-    // 		chatMessageId:res2.data.chatMessageId,
-    // 		sendId:'0000000001',
-    // 		}
-    // 	).then(res3 => {
-    // 		if (res3.msg == '成功' ) {
-    // 			console.log('添加聊天',res3.data);
+    },
+    addChat: function addChat(messageId, status, videoId) {var _this5 = this;
+      console.log(messageId, status);
+      this.$api.photo.addChat({
+        chatContent: '您的老人' + status,
+        chatMessageId: messageId,
+        sendId: '0000000001' }).
 
-    // 		}
-    // 	}).catch(err => {
+      then(function (res) {
+        if (res.msg == '成功') {
+          console.log('添加聊天', res.data);
+          _this5.changeStatus(videoId);
+        }
+      }).catch(function (err) {
 
-    // 	})
-    // }
-  } };exports.default = _default;
+      });
+    },
+    changeStatus: function changeStatus(videoId) {
+      this.$api.photo.changeStatus({
+        videoId: videoId }).
+
+
+      then(function (res) {
+        if (res.msg == '成功') {
+          console.log('修改状态', res.data);
+
+        }
+      }).catch(function (err) {
+
+      });
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

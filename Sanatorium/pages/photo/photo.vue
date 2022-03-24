@@ -239,9 +239,9 @@
 					if (res.msg == '成功' ) {
 						console.log('该老人监控',res.data);
 						for(let s in res.data){
-							if(res.data[s].status!='正常！'){
+							if(res.data[s].status!='正常！'&&res.data[s].operationStatus==-1){
 								console.log('这里要报警')
-								this.judgeChat(res.data[s].oldId,res.data[s].status)
+								this.judgeChat(res.data[s].oldId,res.data[s].status,res.data[s].videoId)
 							}
 						}
 					}
@@ -281,7 +281,8 @@
 				})
 			},
 			//判断是否第一次发消息
-			judgeChat(oldId,status){
+			judgeChat(oldId,status,videoId){
+				console.log('走接口了吗')
 				this.$api.photo.judgeChat({
 					userIdA:uni.getStorageSync('userId'),
 					userIdB:oldId
@@ -290,16 +291,16 @@
 					if (res.msg == '成功' ) {
 						console.log(oldId+'judgeWhether',res.data);
 						if(res.data==true){
-							this.initChat(status)
+							this.initChat(status,videoId)
 						}else{
-							this.addChat(status)
+							this.addChat(status,videoId)
 						}
 					}
 				}).catch(err => {
 				
 				})
 			},
-			initChat(status){
+			initChat(status,videoId){
 				console.log('status',status)
 				this.$api.photo.initChat({
 					chatContent:'您的老人'+status,
@@ -308,29 +309,43 @@
 					chatOtherUserId:'0000000001',
 					}
 				).then(res => {
-				
-						console.log('产生聊天列表',res.data);
-
+						console.log('产生聊天列表',res);
+						this.addChat(res.data,status,videoId)
 					
 				}).catch(err => {
 				
 				})
 			},
-			// addChat(status){
-			// 	this.$api.photo.initChat({
-			// 		chatContent:'您的老人'+status,
-			// 		chatMessageId:res2.data.chatMessageId,
-			// 		sendId:'0000000001',
-			// 		}
-			// 	).then(res3 => {
-			// 		if (res3.msg == '成功' ) {
-			// 			console.log('添加聊天',res3.data);
+			addChat(messageId,status,videoId){
+				console.log(messageId,status)
+				this.$api.photo.addChat({
+					chatContent:'您的老人'+status,
+					chatMessageId:messageId,
+					sendId:'0000000001',
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log('添加聊天',res.data);
+						this.changeStatus(videoId)
+					}
+				}).catch(err => {
 				
-			// 		}
-			// 	}).catch(err => {
+				})
+			},
+			changeStatus(videoId){
+				this.$api.photo.changeStatus({
+					videoId:videoId,
+
+					}
+				).then(res => {
+					if (res.msg == '成功' ) {
+						console.log('修改状态',res.data);
 				
-			// 	})
-			// }
+					}
+				}).catch(err => {
+				
+				})
+			}
 		},
 		
 	}

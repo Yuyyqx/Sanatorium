@@ -369,31 +369,39 @@ __webpack_require__.r(__webpack_exports__);
       this.text = '';
       temp.time = new Date().getHours() + ':' + new Date().getMinutes();
       this.userContextItem.push(temp);
-      uni.setStorageSync(this.lawyertitle, this.userContextItem);
+      // uni.setStorageSync(this.lawyertitle, this.userContextItem)
       this.scrollToBottom();
+    },
+    getChatDetail: function getChatDetail() {
+      // this.$api.message.getChatDetail({
+      // 	oldId:'3768232053',
+      // 	}
+      // ).then(res => {
+      // 	if (res.msg == '成功' ) {
+      // 		console.log(res.data);
+      // 		console.log('aaaaaa',res.data[0].file)
+      // 		this.videoUrl = res.data[0].file
+      // 	}
+      // }).catch(err => {
+
+      // })
     } },
 
   onReady: function onReady() {
     this.scrollToBottom();
   },
   onLoad: function onLoad(option) {
-    this.lawyertitle = option.lawyername;
-    if (this.lawyertitle) {
-      uni.setNavigationBarTitle({
-        title: this.lawyertitle });
-
-    }
-    if (uni.getStorageSync(this.lawyertitle)) {
-      this.userContextItem = uni.getStorageSync(this.lawyertitle);
-    }
-    //获取系统信息
-    // uni.getSystemInfo({
-    // 	success: (res) => {
-    // 		let height = res.windowHeight - uni.upx2px(100);
-    // 		this.sHeight = height;
-    // 	}
-    // })
-
+    // this.lawyertitle = option.lawyername
+    // if (this.lawyertitle) {
+    // 	uni.setNavigationBarTitle({
+    // 		title: this.lawyertitle
+    // 	})
+    // }
+    // if (uni.getStorageSync(this.lawyertitle)) {
+    // 	this.userContextItem = uni.getStorageSync(this.lawyertitle)
+    // }
+    console.log(option);
+    this.getChatDetail();
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

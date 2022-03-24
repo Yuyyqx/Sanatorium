@@ -21,17 +21,17 @@
 				</view>
 			</view>
 			<view class="down">
-				<view class="item" v-for="(item,index) in list" :key="index" @click="gotoDetail()">
+				<view class="item" v-for="(item,index) in chatList" :key="index" @click="gotoDetail(index)">
 					<view class="left">
-						<image :src="item.picUrl" />
+						<image :src="item.userAvatar" />
 					</view>
 					<view :class="[list.length==index+1? 'right':'right1']">
 						<view class="right-left">
-							<text class="item-title">{{item.name}}</text>
-							<text class="item-content">{{item.content}}</text>
+							<text class="item-title">{{item.nickName}}</text>
+							<text class="item-content">{{item.lastMessage}}</text>
 						</view>
 						<view class="right-right">
-							<text class="item-content">{{item.date}}</text>
+							<text class="item-content">{{item.lastMessageTime}}</text>
 							<view :class="[item.red==1? 'hong':'hong1']" />
 
 						</view>
@@ -60,7 +60,7 @@
 				</view>
 			</view>
 			<view class="down">
-				<view class="item" v-for="(item,index) in list" :key="index" @click="gotoDetail()">
+				<view class="item" v-for="(item,index) in list" :key="index" @click="gotoDetail(index)">
 					<view class="left">
 						<image :src="item.picUrl" />
 					</view>
@@ -153,7 +153,9 @@
 						type: '系统通知',
 						red: 0
 					}
-				]
+				],
+				chatList:[],
+				totalList:[]
 			}
 		},
 		onLoad() {
@@ -172,18 +174,40 @@
 
 		},
 		methods: {
-			gotoDetail() {
-				uni.navigateTo({
-					url: 'messageDetail'
-				})
+			gotoDetail(index) {
+				// let List = this.chatList
+				// let id = List[index].chatMessageId
+				// let name = '消息ID 1676742816'
+				//  let obj= Object.create(null);
+				 
+				//    for (let[k,v] of this.totalList) {
+				 
+				//      obj[k] = v;
+				 
+				//     }
+				 
+				//    let JsonStr = JSON.stringify(obj);
+				//    console.log(JsonStr)
+				console.log(this.totalList[index])
+				// console.log(this.totalList.get(name))assertEquals("A", getKeyByLoop(map, 1));
+				// uni.navigateTo({
+				// 	url: 'messageDetail?chatItem = '+this.totalList[index]
+				// })
 			},
 			getChatList() {
-				console.log('进方法了')
 				this.$api.message.getChatDetail({
 					userId: uni.getStorageSync('userId'),
 				}).then(res => {
 					if (res.msg == '成功') {
 						console.log('chatList', res);
+						this.totalList = res.data
+						let arr = res.data.chatList
+						for(let s in arr){
+							arr[s].lastMessageTime = arr[s].lastMessageTime.slice(5,10)+" "+arr[s].lastMessageTime.slice(11,16)
+						}
+						// console.log(arr)
+						this.chatList = arr
+						
 					}
 				}).catch(err => {
 

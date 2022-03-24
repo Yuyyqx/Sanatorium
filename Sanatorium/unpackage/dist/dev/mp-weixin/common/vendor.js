@@ -10052,6 +10052,10 @@ var photo = {
   //不是第一次聊天添加信息
   addChat: function addChat(params) {
     return _request.default.httpRequest("".concat(_base.default.url, "/chat/insertChatDetail"), 'POST', params);
+  },
+  //修改报警视频状态
+  changeStatus: function changeStatus(params) {
+    return _request.default.httpRequest("".concat(_base.default.url, "/picture/updateAlarmStatus"), 'POST', params);
   } };var _default =
 
 
