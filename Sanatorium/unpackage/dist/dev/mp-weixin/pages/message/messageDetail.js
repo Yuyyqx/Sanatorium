@@ -300,8 +300,9 @@ __webpack_require__.r(__webpack_exports__);
         type: 'text',
         context: '谢谢亲',
         time: '11月25日 15:42',
-        view: '已读' }] };
+        view: '已读' }],
 
+      itemList: [] };
 
   },
 
@@ -400,8 +401,13 @@ __webpack_require__.r(__webpack_exports__);
     // if (uni.getStorageSync(this.lawyertitle)) {
     // 	this.userContextItem = uni.getStorageSync(this.lawyertitle)
     // }
-    console.log(option);
-    this.getChatDetail();
+    console.log(JSON.parse(option.chatItem));
+    var arr = JSON.parse(option.chatItem);
+    for (var s in arr) {
+      arr[s].messageCurrentTime = arr[s].messageCurrentTime.slice(5, 10) + " " + arr[s].messageCurrentTime.slice(11, 16);
+    }
+    this.itemList = arr;
+
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

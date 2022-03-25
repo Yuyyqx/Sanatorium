@@ -23,11 +23,11 @@
 			<view class="down">
 				<view class="item" v-for="(item,index) in chatList" :key="index" @click="gotoDetail(index)">
 					<view class="left">
-						<image :src="item.userAvatar" />
+						<image :src="item.mainUserAvatar" />
 					</view>
 					<view :class="[list.length==index+1? 'right':'right1']">
 						<view class="right-left">
-							<text class="item-title">{{item.nickName}}</text>
+							<text class="item-title">{{item.mainUserNickname}}</text>
 							<text class="item-content">{{item.lastMessage}}</text>
 						</view>
 						<view class="right-right">
@@ -175,24 +175,14 @@
 		},
 		methods: {
 			gotoDetail(index) {
-				// let List = this.chatList
-				// let id = List[index].chatMessageId
-				// let name = '消息ID 1676742816'
-				//  let obj= Object.create(null);
-				 
-				//    for (let[k,v] of this.totalList) {
-				 
-				//      obj[k] = v;
-				 
-				//     }
-				 
-				//    let JsonStr = JSON.stringify(obj);
-				//    console.log(JsonStr)
-				console.log(this.totalList[index])
-				// console.log(this.totalList.get(name))assertEquals("A", getKeyByLoop(map, 1));
-				// uni.navigateTo({
-				// 	url: 'messageDetail?chatItem = '+this.totalList[index]
-				// })
+				let List = this.chatList
+				let id = List[index].chatMessageId
+				let name = '消息ID '+id+':'
+				console.log(this.totalList[name])
+				
+				uni.navigateTo({
+					url: 'messageDetail?chatItem='+JSON.stringify(this.totalList[name])
+				})
 			},
 			getChatList() {
 				this.$api.message.getChatDetail({
@@ -207,7 +197,7 @@
 						}
 						// console.log(arr)
 						this.chatList = arr
-						
+
 					}
 				}).catch(err => {
 

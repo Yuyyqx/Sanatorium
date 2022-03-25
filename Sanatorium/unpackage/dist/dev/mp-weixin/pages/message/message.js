@@ -307,24 +307,14 @@ var _default =
   },
   methods: {
     gotoDetail: function gotoDetail(index) {
-      // let List = this.chatList
-      // let id = List[index].chatMessageId
-      // let name = '消息ID 1676742816'
-      //  let obj= Object.create(null);
+      var List = this.chatList;
+      var id = List[index].chatMessageId;
+      var name = '消息ID ' + id + ':';
+      console.log(this.totalList[name]);
 
-      //    for (let[k,v] of this.totalList) {
+      uni.navigateTo({
+        url: 'messageDetail?chatItem=' + JSON.stringify(this.totalList[name]) });
 
-      //      obj[k] = v;
-
-      //     }
-
-      //    let JsonStr = JSON.stringify(obj);
-      //    console.log(JsonStr)
-      console.log(this.totalList[index]);
-      // console.log(this.totalList.get(name))assertEquals("A", getKeyByLoop(map, 1));
-      // uni.navigateTo({
-      // 	url: 'messageDetail?chatItem = '+this.totalList[index]
-      // })
     },
     getChatList: function getChatList() {var _this = this;
       this.$api.message.getChatDetail({

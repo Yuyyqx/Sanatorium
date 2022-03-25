@@ -2,37 +2,37 @@
 	<view class="page">
 		<view class="bgConston" id="chatContent">
 			<view class="userSession">
-				<view class="item" v-for="(item,index) in userContextItem" :key="index">
-					<view class="time">{{item.time}}</view>
-					<view class="userH" :class="{'userMe':item.userId == ''}">
+				<view class="item" v-for="(item,index) in itemList" :key="index">
+					<view class="time">{{item.messageCurrentTime}}</view>
+					<view class="userH" :class="{'userMe':item.sendId == '1082131890'}">
 						<view class="userImg">
-							<image :src="item.userImg" mode="scaleToFill"></image>
+							<image :src="item.sendUserAvatar" mode="scaleToFill"></image>
 						</view>
 						<view :id="index" class="userType" @longpress="handleLongPress(index)">
 							<!--是否显示用户昵称-->
-							<template v-if="item.userId != ''">
+							<view v-if="item.userId != ''">
 								<view class="userN">
-									<text>{{item.userName}}</text>
+									<text>{{item.sendUserName}}</text>
 								</view>
-							</template>
+							</view>
 							<!--文本格式-->
-							<template v-if="item.type == 'text'">
+							<view>
 								<view class="textType">
-									{{item.context}}
+									{{item.messageContent}}
 								</view>
-							</template>
+							</view>
 							<!--图片格式-->
-							<template v-else-if="item.type == 'img'">
+							<!-- <view v-else-if="item.type == 'img'">
 								<view class="imgType">
 									<image :src="item.picImg" mode="scaleToFill"></image>
 								</view>
-							</template>
+							</view> -->
 							<!--视频格式-->
-							<template v-else-if="item.type == 'video'">
+							<!-- <view v-else-if="item.type == 'video'">
 								<view class="videoType">
 									<video :src="item.videoSrc" controls="false"></video>
 								</view>
-							</template>
+							</view> -->
 						</view>
 
 					</view>
@@ -169,7 +169,8 @@
 					context: '谢谢亲',
 					time: '11月25日 15:42',
 					view: '已读'
-				},]
+				},],
+				itemList:[]
 			}
 		},
 
@@ -268,8 +269,13 @@
 			// if (uni.getStorageSync(this.lawyertitle)) {
 			// 	this.userContextItem = uni.getStorageSync(this.lawyertitle)
 			// }
-			console.log(option)
-			this.getChatDetail()
+			console.log(JSON.parse(option.chatItem))
+			let arr = JSON.parse(option.chatItem)
+			for(let s in arr){
+				arr[s].messageCurrentTime = arr[s].messageCurrentTime.slice(5,10)+" "+arr[s].messageCurrentTime.slice(11,16)
+			}
+			this.itemList = arr
+
 		}
 	}
 </script>
