@@ -11212,78 +11212,46 @@ var render = function() {
                         },
                         [
                           _vm._$g("9-" + $30, "i")
-                            ? [
-                                _c(
-                                  "v-uni-view",
-                                  {
-                                    staticClass: _vm._$g("10-" + $30, "sc"),
-                                    attrs: { _i: "10-" + $30 }
-                                  },
-                                  [
-                                    _c(
-                                      "v-uni-text",
-                                      { attrs: { _i: "11-" + $30 } },
-                                      [_vm._v(_vm._$g("11-" + $30, "t0-0"))]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ]
+                            ? _c(
+                                "v-uni-view",
+                                { attrs: { _i: "9-" + $30 } },
+                                [
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("10-" + $30, "sc"),
+                                      attrs: { _i: "10-" + $30 }
+                                    },
+                                    [
+                                      _c(
+                                        "v-uni-text",
+                                        { attrs: { _i: "11-" + $30 } },
+                                        [_vm._v(_vm._$g("11-" + $30, "t0-0"))]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
                             : _vm._e(),
-                          _vm._$g("12-" + $30, "i")
-                            ? [
-                                _c(
-                                  "v-uni-view",
-                                  {
-                                    staticClass: _vm._$g("13-" + $30, "sc"),
-                                    attrs: { _i: "13-" + $30 }
-                                  },
-                                  [_vm._v(_vm._$g("13-" + $30, "t0-0"))]
-                                )
-                              ]
-                            : _vm._$g("14-" + $30, "e")
-                            ? [
-                                _c(
-                                  "v-uni-view",
-                                  {
-                                    staticClass: _vm._$g("15-" + $30, "sc"),
-                                    attrs: { _i: "15-" + $30 }
-                                  },
-                                  [
-                                    _c("v-uni-image", {
-                                      attrs: {
-                                        src: _vm._$g("16-" + $30, "a-src"),
-                                        mode: "scaleToFill",
-                                        _i: "16-" + $30
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]
-                            : _vm._$g("17-" + $30, "e")
-                            ? [
-                                _c(
-                                  "v-uni-view",
-                                  {
-                                    staticClass: _vm._$g("18-" + $30, "sc"),
-                                    attrs: { _i: "18-" + $30 }
-                                  },
-                                  [
-                                    _c("v-uni-video", {
-                                      attrs: {
-                                        src: _vm._$g("19-" + $30, "a-src"),
-                                        controls: "false",
-                                        _i: "19-" + $30
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]
-                            : _vm._e()
+                          _c(
+                            "v-uni-view",
+                            { attrs: { _i: "12-" + $30 } },
+                            [
+                              _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("13-" + $30, "sc"),
+                                  attrs: { _i: "13-" + $30 }
+                                },
+                                [_vm._v(_vm._$g("13-" + $30, "t0-0"))]
+                              )
+                            ],
+                            1
+                          )
                         ],
-                        2
+                        1
                       )
                     ],
                     1
@@ -11291,10 +11259,10 @@ var render = function() {
                   _c(
                     "v-uni-view",
                     {
-                      class: _vm._$g("20-" + $30, "c"),
-                      attrs: { _i: "20-" + $30 }
+                      class: _vm._$g("14-" + $30, "c"),
+                      attrs: { _i: "14-" + $30 }
                     },
-                    [_vm._v(_vm._$g("20-" + $30, "t0-0"))]
+                    [_vm._v(_vm._$g("14-" + $30, "t0-0"))]
                   )
                 ],
                 1
@@ -11306,7 +11274,7 @@ var render = function() {
         1
       ),
       _c("bianmarenTooltips", {
-        attrs: { _i: 21 },
+        attrs: { _i: 15 },
         on: {
           btnClick: function($event) {
             return _vm.$handleViewEvent($event)
@@ -11315,30 +11283,30 @@ var render = function() {
       }),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(22, "sc"), attrs: { _i: 22 } },
+        { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(23, "sc"), attrs: { _i: 23 } },
+            { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
             [
               _c(
                 "v-uni-view",
-                { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
+                { staticClass: _vm._$g(18, "sc"), attrs: { _i: 18 } },
                 [
                   _c("v-uni-image", {
-                    attrs: { src: _vm._$g(25, "a-src"), _i: 25 }
+                    attrs: { src: _vm._$g(19, "a-src"), _i: 19 }
                   })
                 ],
                 1
               ),
               _c("v-uni-input", {
-                staticClass: _vm._$g(26, "sc"),
+                staticClass: _vm._$g(20, "sc"),
                 attrs: {
                   "confirm-type": "search",
                   type: "text",
                   placeholder: "请输入",
                   "adjust-position": "false",
-                  _i: 26
+                  _i: 20
                 },
                 on: {
                   confirm: function($event) {
@@ -11346,9 +11314,9 @@ var render = function() {
                   }
                 },
                 model: {
-                  value: _vm._$g(26, "v-model"),
+                  value: _vm._$g(20, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(26, $$v)
+                    _vm.$handleVModelEvent(20, $$v)
                   },
                   expression: "text"
                 }
@@ -11356,8 +11324,8 @@ var render = function() {
               _c(
                 "v-uni-view",
                 {
-                  staticClass: _vm._$g(27, "sc"),
-                  attrs: { _i: 27 },
+                  staticClass: _vm._$g(21, "sc"),
+                  attrs: { _i: 21 },
                   on: {
                     click: function($event) {
                       return _vm.$handleViewEvent($event)
@@ -11366,7 +11334,7 @@ var render = function() {
                 },
                 [
                   _c("v-uni-image", {
-                    attrs: { src: _vm._$g(28, "a-src"), _i: 28 }
+                    attrs: { src: _vm._$g(22, "a-src"), _i: 22 }
                   })
                 ],
                 1
@@ -11689,7 +11657,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.flex-between {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\n}\n.line {\r\n  margin: 40rpx 0;\r\n  border-bottom: 2rpx solid #f2f2f2;\n}\nuni-input[type=\"checkbox\"] {\r\n  -webkit-appearance: checkbox;\n}\nuni-input[type=\"radio\"] {\r\n  -webkit-appearance: radio;\n}\nbody {\r\n  background-color: #e8e8e8;\n}\n.bgConston {\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: #e8e8e8;\r\n  margin: 0;\r\n  padding: 0;\r\n  padding-bottom: 300rpx;\n}\n.userSession {\r\n  width: 100%;\r\n  height: auto;\r\n  border-top: 20rpx solid #e8e8e8;\r\n  overflow: auto;\n}\n.userSession .item {\r\n  margin-bottom: 30rpx;\n}\n.userSession .time {\r\n  color: #999999;\r\n  text-align: center;\r\n  margin-top: 30rpx;\n}\n.userSession .userH {\r\n  width: 80%;\r\n  height: auto;\r\n  display: flex;\r\n  flex: 1;\r\n  flex-wrap: wrap;\r\n  padding: 20rpx;\n}\n.userSession .userH .userImg {\r\n  width: 70rpx;\r\n  height: 70rpx;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.userSession .userH .userImg uni-image {\r\n  width: 70rpx;\r\n  height: 70rpx;\r\n  border-radius: 50%;\n}\n.userSession .userH .userType {\r\n  display: flex;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  padding: 20rpx;\r\n  margin-bottom: -30rpx;\n}\n.userSession .userH .userType .userN {\r\n  height: 50rpx;\r\n  display: flex;\r\n  justify-content: flex-start;\n}\n.userSession .userH .userType .userN uni-text {\r\n  height: 50rpx;\r\n  min-height: 100rpx;\r\n  color: #999999;\n}\n.userSession .userH .userType .textType {\r\n  word-wrap: break-word;\r\n  word-break: break-all;\r\n  overflow: hidden;\r\n  text-align: left;\r\n  max-width: 400rpx;\r\n  background-color: #FFFFFF;\r\n  border-radius: 10rpx;\r\n  margin-bottom: -20rpx;\r\n  box-shadow: 3rpx 3rpx 3rpx 3rpx #E3E3E3;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 20rpx;\n}\n.userSession .userH .userType .textType uni-text {\r\n  font-size: 32rpx;\r\n  color: #666;\n}\n.userSession .userH .userType .imgType {\r\n  max-width: 300rpx;\r\n  max-height: 420rpx;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #FFFFFF;\r\n  border-radius: 20rpx;\r\n  box-shadow: 3rpx 3rpx 3rpx 3rpx #E3E3E3;\n}\n.userSession .userH .userType .imgType uni-image {\r\n  width: 250rpx;\r\n  height: 350rpx;\r\n  padding: 20rpx;\n}\n.userSession .userH .userType .videoType {\r\n  max-width: 300rpx;\r\n  max-height: 400rpx;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #FFFFFF;\r\n  border-radius: 20rpx;\r\n  box-shadow: 3rpx 3rpx 3rpx 3rpx #E3E3E3;\n}\n.userSession .userH .userType .videoType uni-image {\r\n  width: 270rpx;\r\n  height: 370rpx;\r\n  padding: 20rpx;\n}\n.userSession .userMe {\r\n  width: 100%;\r\n  height: auto;\r\n  display: flex;\r\n  flex: 1;\r\n  flex-wrap: wrap;\r\n  padding: 20rpx;\r\n  justify-content: flex-start;\r\n  flex-direction: row-reverse;\r\n  text-align: right;\n}\n.userSession .myview {\r\n  color: #999999;\r\n  text-align: right;\r\n  margin-right: 80rpx;\r\n  padding-top: 30rpx;\n}\n.userSession .otherview {\r\n  color: #999999;\r\n  margin-left: 80rpx;\r\n  padding-top: 30rpx;\n}\n.userInput {\r\n  height: 100rpx;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  padding: 0 10rpx;\r\n  box-shadow: 0 0 5rpx 0 #e3e3e3;\r\n  background-color: white;\n}\n.userInput .want {\r\n  display: flex;\r\n  color: #999999;\r\n  font-size: 26rpx;\r\n  margin-bottom: 20rpx;\r\n  margin-top: 20rpx;\n}\n.userInput .want .service {\r\n  display: flex;\r\n  border: 1rpx solid #C0C0C0;\r\n  border-radius: 20rpx;\r\n  font-size: 28rpx;\r\n  margin-left: 10rpx;\r\n  padding: 5rpx;\n}\n.userInput .want .service uni-image {\r\n  width: 20rpx;\r\n  height: 20rpx;\n}\n.userInput .send {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 100rpx;\n}\n.userInput .send .sendimg1 {\r\n  width: 10%;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: center;\n}\n.userInput .send .sendimg1 uni-image {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  margin-top: 20rpx;\n}\n.userInput .send .sendinput {\r\n  width: 75%;\r\n  height: 65rpx;\r\n  border-radius: 15rpx;\r\n  border: 1rpx solid #C0C0C0;\r\n  padding-left: 10rpx;\r\n  margin-top: 15rpx;\n}\n.userInput .send .viewimage {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  margin-left: -70rpx;\r\n  margin-top: 5rpx;\n}\n.userInput .send .viewimage .icon {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  position: fixed;\r\n  z-index: 999;\n}\n.userInput .send .sendimg2 {\r\n  width: 10%;\r\n  margin-left: 30rpx;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 15rpx;\n}\n.userInput .send .sendimg2 uni-image {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  margin-top: 5rpx;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.flex-between {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\n}\n.line {\r\n  margin: 40rpx 0;\r\n  border-bottom: 2rpx solid #f2f2f2;\n}\nuni-input[type=\"checkbox\"] {\r\n  -webkit-appearance: checkbox;\n}\nuni-input[type=\"radio\"] {\r\n  -webkit-appearance: radio;\n}\nbody {\r\n  background-color: #e8e8e8;\n}\n.bgConston {\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: #e8e8e8;\r\n  margin: 0;\r\n  padding: 0;\r\n  padding-bottom: 100rpx;\n}\n.userSession {\r\n  width: 100%;\r\n  height: auto;\r\n  border-top: 20rpx solid #e8e8e8;\r\n  overflow: auto;\n}\n.userSession .item {\r\n  margin-bottom: 30rpx;\n}\n.userSession .time {\r\n  color: #999999;\r\n  text-align: center;\r\n  margin-top: 30rpx;\n}\n.userSession .userH {\r\n  width: 80%;\r\n  height: auto;\r\n  display: flex;\r\n  flex: 1;\r\n  flex-wrap: wrap;\r\n  padding: 20rpx;\n}\n.userSession .userH .userImg {\r\n  width: 70rpx;\r\n  height: 70rpx;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.userSession .userH .userImg uni-image {\r\n  width: 70rpx;\r\n  height: 70rpx;\r\n  border-radius: 50%;\n}\n.userSession .userH .userType {\r\n  display: flex;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  padding: 20rpx;\r\n  margin-bottom: -30rpx;\n}\n.userSession .userH .userType .userN {\r\n  height: 50rpx;\r\n  display: flex;\r\n  justify-content: flex-start;\n}\n.userSession .userH .userType .userN uni-text {\r\n  height: 50rpx;\r\n  min-height: 100rpx;\r\n  color: #999999;\n}\n.userSession .userH .userType .textType {\r\n  word-wrap: break-word;\r\n  word-break: break-all;\r\n  overflow: hidden;\r\n  text-align: left;\r\n  max-width: 400rpx;\r\n  background-color: #FFFFFF;\r\n  border-radius: 10rpx;\r\n  margin-bottom: -20rpx;\r\n  box-shadow: 3rpx 3rpx 3rpx 3rpx #E3E3E3;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 20rpx;\n}\n.userSession .userH .userType .textType uni-text {\r\n  font-size: 32rpx;\r\n  color: #666;\n}\n.userSession .userH .userType .imgType {\r\n  max-width: 300rpx;\r\n  max-height: 420rpx;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #FFFFFF;\r\n  border-radius: 20rpx;\r\n  box-shadow: 3rpx 3rpx 3rpx 3rpx #E3E3E3;\n}\n.userSession .userH .userType .imgType uni-image {\r\n  width: 250rpx;\r\n  height: 350rpx;\r\n  padding: 20rpx;\n}\n.userSession .userH .userType .videoType {\r\n  max-width: 300rpx;\r\n  max-height: 400rpx;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #FFFFFF;\r\n  border-radius: 20rpx;\r\n  box-shadow: 3rpx 3rpx 3rpx 3rpx #E3E3E3;\n}\n.userSession .userH .userType .videoType uni-image {\r\n  width: 270rpx;\r\n  height: 370rpx;\r\n  padding: 20rpx;\n}\n.userSession .userMe {\r\n  width: 100%;\r\n  height: auto;\r\n  display: flex;\r\n  flex: 1;\r\n  flex-wrap: wrap;\r\n  padding: 20rpx;\r\n  justify-content: flex-start;\r\n  flex-direction: row-reverse;\r\n  text-align: right;\n}\n.userSession .myview {\r\n  color: #999999;\r\n  text-align: right;\r\n  margin-right: 80rpx;\r\n  padding-top: 30rpx;\n}\n.userSession .otherview {\r\n  color: #999999;\r\n  margin-left: 80rpx;\r\n  padding-top: 30rpx;\n}\n.userInput {\r\n  height: 100rpx;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  padding: 0 10rpx;\r\n  box-shadow: 0 0 5rpx 0 #e3e3e3;\r\n  background-color: white;\n}\n.userInput .want {\r\n  display: flex;\r\n  color: #999999;\r\n  font-size: 26rpx;\r\n  margin-bottom: 20rpx;\r\n  margin-top: 20rpx;\n}\n.userInput .want .service {\r\n  display: flex;\r\n  border: 1rpx solid #C0C0C0;\r\n  border-radius: 20rpx;\r\n  font-size: 28rpx;\r\n  margin-left: 10rpx;\r\n  padding: 5rpx;\n}\n.userInput .want .service uni-image {\r\n  width: 20rpx;\r\n  height: 20rpx;\n}\n.userInput .send {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 100rpx;\n}\n.userInput .send .sendimg1 {\r\n  width: 10%;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: center;\n}\n.userInput .send .sendimg1 uni-image {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  margin-top: 20rpx;\n}\n.userInput .send .sendinput {\r\n  width: 75%;\r\n  height: 65rpx;\r\n  border-radius: 15rpx;\r\n  border: 1rpx solid #C0C0C0;\r\n  padding-left: 10rpx;\r\n  margin-top: 15rpx;\n}\n.userInput .send .viewimage {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  margin-left: -70rpx;\r\n  margin-top: 5rpx;\n}\n.userInput .send .viewimage .icon {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  position: fixed;\r\n  z-index: 999;\n}\n.userInput .send .sendimg2 {\r\n  width: 10%;\r\n  margin-left: 30rpx;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 15rpx;\n}\n.userInput .send .sendimg2 uni-image {\r\n  width: 55rpx;\r\n  height: 55rpx;\r\n  margin-top: 5rpx;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -11804,7 +11772,7 @@ var render = function() {
                             { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
                             [
                               _c("v-uni-text", { attrs: { _i: 7 } }, [
-                                _vm._v("家属端")
+                                _vm._v(_vm._$g(7, "t0-0"))
                               ]),
                               _vm._$g(8, "i")
                                 ? _c("v-uni-image", {
@@ -12401,7 +12369,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\nbody {\n\tbackground-color: rgb(247, 248, 249);\n}\n.content {\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n.top {\n\twidth: 750rpx;\n\theight: 350rpx;\n\tbox-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);\n}\n.top-hugong {\n\twidth: 750rpx;\n\n\tbox-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);\n}\n.up {\n\tdisplay: flex;\n\tpadding: 30rpx;\n\tbackground-color: #ffffff;\n}\n.image {\n\twidth: 155rpx;\n\theight: 155rpx;\n\tborder-radius: 50%;\n}\n.title {\n\tdisplay: flex;\n\tflex-direction: column;\n\theight: 120rpx;\n\tjustify-content: space-around;\n\tmargin-left: 25rpx;\n\tmargin-top: 10rpx;\n\tmargin-bottom: 10rpx;\n}\n.title-first {\n\tfont-size: 36rpx;\n\tfont-weight: 600;\n\tcolor: #101010;\n\tdisplay: flex;\n\tmargin-bottom: 15rpx;\n}\n.title-first uni-image {\n\twidth: 150rpx;\n\theight: 65rpx;\n\tmargin-top: -10rpx;\n\tmargin-left: 20rpx;\n}\n.unShure {\n\twidth: 90rpx;\n\theight: 40rpx;\n\tbackground-color: rgb(187, 0, 3);\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tfont-size: 23rpx;\n\tcolor: #ffffff;\n\tborder-radius: 50rpx;\n\tmargin-left: 50rpx;\n\tmargin-top: 10rpx;\n}\n.title-phone {\n\tfont-size: small;\n\tcolor: #5F5E5E;\n\tfont-weight: 500;\n}\n.icon {\n\twidth: 35rpx;\n\theight: 35rpx;\n\tmargin-left: 200rpx;\n\tmargin-top: 20rpx;\n}\n.down {\n\tpadding: 10rpx;\n\tmargin-top: 20rpx;\n\tdisplay: flex;\n\twidth: 700rpx;\n\tjustify-content: space-around;\n\tborder-radius: 15rpx;\n\tbackground-color: #ffffff;\n\tmargin-left: 25rpx;\n\tbox-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);\n}\n.item {\n\twidth: 120rpx;\n\theight: 120rpx;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-around;\n\talign-items: center;\n}\n.item uni-image {\n\twidth: 65rpx;\n\theight: 65rpx;\n}\n.bottom {\n\twidth: 750rpx;\n\tbackground-color: #ffffff;\n\tmargin-top: 30rpx;\n\tpadding: 25rpx 0rpx 0rpx 0rpx;\n}\n.bottom-item {\n\tdisplay: flex;\n\twidth: 750rpx;\n\tpadding: 0rpx 0rpx 0rpx 25rpx; /*  上 右 下左 */\n}\n.bottom-item uni-image {\n\twidth: 35rpx;\n\theight: 35rpx;\n\tmargin-right: 20rpx;\n}\n.right {\n\tmargin-left: 500rpx;\n}\n.line {\n\twidth: 700rpx;\n\theight: 1rpx;\n\tbackground-color: #f7f8f9;\n\n\tmargin: 28rpx 0rpx 28rpx 50rpx;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n\tbackground-color: rgb(247, 248, 249);\n}\n.content {\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n.top {\n\twidth: 750rpx;\n\theight: 350rpx;\n\tbox-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);\n}\n.top-hugong {\n\twidth: 750rpx;\n\n\tbox-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);\n}\n.up {\n\tdisplay: flex;\n\tpadding: 30rpx;\n\tbackground-color: #ffffff;\n}\n.image {\n\twidth: 145rpx;\n\theight: 145rpx;\n\tborder-radius: 50%;\n\t/* border: 1rpx solid#333333; */\n}\n.title {\n\tdisplay: flex;\n\tflex-direction: column;\n\theight: 120rpx;\n\tjustify-content: space-around;\n\tmargin-left: 25rpx;\n\tmargin-top: 10rpx;\n\tmargin-bottom: 10rpx;\n}\n.title-first {\n\tfont-size: 36rpx;\n\tfont-weight: 600;\n\tcolor: #101010;\n\tdisplay: flex;\n\tmargin-bottom: 15rpx;\n}\n.title-first uni-image {\n\twidth: 150rpx;\n\theight: 65rpx;\n\tmargin-top: -10rpx;\n\tmargin-left: 20rpx;\n}\n.unShure {\n\twidth: 90rpx;\n\theight: 40rpx;\n\tbackground-color: rgb(187, 0, 3);\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tfont-size: 23rpx;\n\tcolor: #ffffff;\n\tborder-radius: 50rpx;\n\tmargin-left: 50rpx;\n\tmargin-top: 10rpx;\n}\n.title-phone {\n\tfont-size: small;\n\tcolor: #5F5E5E;\n\tfont-weight: 500;\n}\n.icon {\n\twidth: 35rpx;\n\theight: 35rpx;\n\tposition: absolute;\n\tright: 50rpx;\n\tmargin-top: 20rpx;\n}\n.down {\n\tpadding: 10rpx;\n\tmargin-top: 20rpx;\n\tdisplay: flex;\n\twidth: 700rpx;\n\tjustify-content: space-around;\n\tborder-radius: 15rpx;\n\tbackground-color: #ffffff;\n\tmargin-left: 25rpx;\n\tbox-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);\n}\n.item {\n\twidth: 120rpx;\n\theight: 120rpx;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-around;\n\talign-items: center;\n}\n.item uni-image {\n\twidth: 65rpx;\n\theight: 65rpx;\n}\n.bottom {\n\twidth: 750rpx;\n\tbackground-color: #ffffff;\n\tmargin-top: 30rpx;\n\tpadding: 25rpx 0rpx 0rpx 0rpx;\n}\n.bottom-item {\n\tdisplay: flex;\n\twidth: 750rpx;\n\tpadding: 0rpx 0rpx 0rpx 25rpx; /*  上 右 下左 */\n}\n.bottom-item uni-image {\n\twidth: 35rpx;\n\theight: 35rpx;\n\tmargin-right: 20rpx;\n}\n.right {\n\tmargin-left: 500rpx;\n}\n.line {\n\twidth: 700rpx;\n\theight: 1rpx;\n\tbackground-color: #f7f8f9;\n\n\tmargin: 28rpx 0rpx 28rpx 50rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -13363,7 +13331,11 @@ var render = function() {
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+            {
+              staticClass: _vm._$g(2, "sc"),
+              staticStyle: { height: "100rpx" },
+              attrs: { _i: 2 }
+            },
             [
               _c("v-uni-text", { attrs: { _i: 3 } }, [_vm._v("头像")]),
               _c("v-uni-image", {
@@ -13691,7 +13663,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #f7f8f9;\n}\n.content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.bottom {\n  width: 750rpx;\n  background-color: #ffffff;\n  margin-top: 30rpx;\n  padding: 25rpx 0rpx 0rpx 0rpx;\n}\n.bottom-item {\n  display: flex;\n  width: 750rpx;\n  padding: 0rpx 0rpx 0rpx 20rpx;\n  align-items: center;\n}\n.bottom-item uni-image {\n  width: 25rpx;\n  height: 25rpx;\n  margin-right: 20rpx;\n}\n.bottom-item .touxiang {\n  width: 100rpx;\n  height: 100rpx;\n  margin-left: 520rpx;\n}\n.right {\n  position: absolute;\n  right: 0rpx;\n  color: #898989;\n  display: flex;\n  align-items: center;\n  /* margin-left: 510rpx; */\n}\n.right uni-image {\n  margin-left: 20rpx;\n}\n.unShure {\n  width: 90rpx;\n  height: 40rpx;\n  background-color: #bb0003;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 23rpx;\n  color: #ffffff;\n  border-radius: 50rpx;\n}\n.shure {\n  width: 90rpx;\n  height: 40rpx;\n  background-color: #61bb9c;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 23rpx;\n  color: #ffffff;\n  border-radius: 50rpx;\n}\n.line {\n  width: 720rpx;\n  height: 1rpx;\n  background-color: #f7f8f9;\n  margin: 28rpx 0rpx 28rpx 20rpx;\n}\n.change {\n  width: 750rpx;\n  height: 90rpx;\n  background-color: #ffffff;\n  color: #005500;\n  margin-top: 20rpx;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #f7f8f9;\n}\n.content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.bottom {\n  width: 750rpx;\n  background-color: #ffffff;\n  margin-top: 30rpx;\n  padding: 25rpx 0rpx 0rpx 0rpx;\n}\n.bottom-item {\n  display: flex;\n  width: 750rpx;\n  padding: 0rpx 0rpx 0rpx 20rpx;\n  align-items: center;\n}\n.bottom-item uni-image {\n  width: 25rpx;\n  height: 25rpx;\n  margin-right: 20rpx;\n}\n.bottom-item .touxiang {\n  width: 100rpx;\n  height: 100rpx;\n  border-radius: 50%;\n  position: absolute;\n  right: 50rpx;\n  margin: 30rpx 0rpx 30rpx 0rpx ;\n}\n.right {\n  position: absolute;\n  right: 0rpx;\n  color: #898989;\n  display: flex;\n  align-items: center;\n  /* margin-left: 510rpx; */\n}\n.right uni-image {\n  margin-left: 20rpx;\n}\n.unShure {\n  width: 90rpx;\n  height: 40rpx;\n  background-color: #bb0003;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 23rpx;\n  color: #ffffff;\n  border-radius: 50rpx;\n}\n.shure {\n  width: 90rpx;\n  height: 40rpx;\n  background-color: #61bb9c;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 23rpx;\n  color: #ffffff;\n  border-radius: 50rpx;\n}\n.line {\n  width: 720rpx;\n  height: 1rpx;\n  background-color: #f7f8f9;\n  margin: 28rpx 0rpx 28rpx 20rpx;\n}\n.change {\n  width: 750rpx;\n  height: 90rpx;\n  background-color: #ffffff;\n  color: #005500;\n  margin-top: 20rpx;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

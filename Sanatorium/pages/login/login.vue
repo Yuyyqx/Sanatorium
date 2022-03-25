@@ -118,7 +118,7 @@ loginClick() {
 							})
 						}
 					}).catch(err => {
-					
+						this.$refs.uToast.show(err)
 					})
 				}else if(this.way==1){ //验证码登录
 				console.log('way+',this.way)

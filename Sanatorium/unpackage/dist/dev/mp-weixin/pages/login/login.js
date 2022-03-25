@@ -259,7 +259,7 @@ var _default =
 
           }
         }).catch(function (err) {
-
+          _this.$refs.uToast.show(err);
         });
       } else if (this.way == 1) {//验证码登录
         console.log('way+', this.way);
