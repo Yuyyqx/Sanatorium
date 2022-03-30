@@ -318,7 +318,8 @@ var _default =
 
       value1: true,
       oldIdList: [],
-      robertList: [] };
+      robertList: [],
+      photoUrl: '' };
 
   },
   onLoad: function onLoad() {
@@ -347,12 +348,13 @@ var _default =
     //获取数据
     this.getOldList();
     this.getRobert();
+    // this.getVideo()
 
   },
   methods: {
     gotoDetail: function gotoDetail() {
       uni.navigateTo({
-        url: 'photoDetail' });
+        url: 'photoDetail?photoUrl=' + this.photoUrl });
 
     },
     titlePicker: function titlePicker(e) {
@@ -393,6 +395,7 @@ var _default =
         then(function (res) {
           if (res.msg == '成功') {
             console.log('该老人监控', res.data);
+            _this.photoUrl = res.data[0].file;
             for (var _s in res.data) {
               if (res.data[_s].status != '正常！' && res.data[_s].operationStatus == -1) {
                 console.log('这里要报警');
@@ -419,10 +422,12 @@ var _default =
           }
           console.log('oldIdList', _this2.oldIdList);
           _this2.getPhotoList();
+
         }
       }).catch(function (err) {
 
       });
+
     },
     //报警流程
     //获取所有机器人id

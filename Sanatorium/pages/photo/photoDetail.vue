@@ -21,8 +21,10 @@
  			}
 			
 		},
-		onLoad() {
-			this.getVideo()
+		onLoad(option) {
+			console.log(option.photoUrl)
+			// this.videoUrl = option.photoUrl
+			// this.getVideo()
 		},
 	   onReady: function (res) {
 	        this.videoContext = uni.createVideoContext('myVideo')

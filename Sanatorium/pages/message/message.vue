@@ -32,8 +32,8 @@
 						</view>
 						<view class="right-right">
 							<text class="item-content">{{item.lastMessageTime}}</text>
-							<view :class="[item.red==1? 'hong':'hong1']" />
-
+							<!-- <view :class="[item.red==1? 'hong':'hong1']" /> -->
+							<view class="hong" />
 						</view>
 					</view>
 				</view>
@@ -196,7 +196,7 @@
 							arr[s].lastMessageTime = arr[s].lastMessageTime.slice(5,10)+" "+arr[s].lastMessageTime.slice(11,16)
 						}
 						// console.log(arr)
-						this.chatList = arr
+						this.chatList = arr.reverse()
 
 					}
 				}).catch(err => {
@@ -334,6 +334,7 @@
 	.hong {
 		width: 15rpx;
 		height: 15rpx;
+		margin-left: 100rpx;
 		border-radius: 50%;
 		background-color: rgb(255, 77, 77);
 	}

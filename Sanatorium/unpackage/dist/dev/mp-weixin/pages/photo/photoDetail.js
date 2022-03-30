@@ -153,8 +153,10 @@ var _default =
 
 
   },
-  onLoad: function onLoad() {
-    this.getVideo();
+  onLoad: function onLoad(option) {
+    console.log(option.photoUrl);
+    // this.videoUrl = option.photoUrl
+    // this.getVideo()
   },
   onReady: function onReady(res) {
     this.videoContext = uni.createVideoContext('myVideo');

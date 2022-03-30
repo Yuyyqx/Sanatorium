@@ -163,7 +163,8 @@
 				},],
 				value1: true,
 				oldIdList:[],
-				robertList:[]
+				robertList:[],
+				photoUrl:''
 			}
 		},
 		onLoad() {
@@ -192,12 +193,13 @@
 			//获取数据
 			this.getOldList()
 			this.getRobert()
+			// this.getVideo()
 			
 		},
 		methods: {
 			gotoDetail() {
 				uni.navigateTo({
-					url: 'photoDetail'
+					url: 'photoDetail?photoUrl='+this.photoUrl
 				})
 			},
 			titlePicker(e) {
@@ -238,6 +240,7 @@
 				).then(res => {
 					if (res.msg == '成功' ) {
 						console.log('该老人监控',res.data);
+						this.photoUrl=res.data[0].file
 						for(let s in res.data){
 							if(res.data[s].status!='正常！'&&res.data[s].operationStatus==-1){
 								console.log('这里要报警')
@@ -264,10 +267,12 @@
 						}
 						console.log('oldIdList',this.oldIdList)
 						this.getPhotoList()
+						
 					}
 				}).catch(err => {
 				
 				})
+				
 			},
 			//报警流程
 			//获取所有机器人id
@@ -345,7 +350,8 @@
 				}).catch(err => {
 				
 				})
-			}
+			},
+
 		},
 		
 	}

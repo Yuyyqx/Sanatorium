@@ -328,7 +328,7 @@ var _default =
             arr[s].lastMessageTime = arr[s].lastMessageTime.slice(5, 10) + " " + arr[s].lastMessageTime.slice(11, 16);
           }
           // console.log(arr)
-          _this.chatList = arr;
+          _this.chatList = arr.reverse();
 
         }
       }).catch(function (err) {
